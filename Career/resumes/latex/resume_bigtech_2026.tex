@@ -61,42 +61,43 @@
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Infrastructure \& Scale, Notifications Service {\normalfont\textit{(promoted year-over-year)}}}{July 2022 – Present}
 \begin{itemize}
-  \item Own design and end-to-end reliability of distributed event-processing infrastructure
-    handling \textbf{6B+ events/month} across OneDrive and SharePoint on Linux-hosted
-    \textbf{AKS clusters}; define and enforce \textbf{SLOs and error budgets} with SRE teams.
-  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth,
-    eliminating over-provisioning and reducing tail latency (\textbf{\$500k–\$750k annual savings}).
-  \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for multi-region
-    cluster provisioning, \textbf{Helm}-managed workloads, and pod disruption budgets;
-    rebuilt infra-as-code pipelines for safe, repeatable deploys at scale.
-  \item Designed \textbf{multi-region failover} with Azure FrontDoor (anycast routing, TLS offload,
-    WAF) and Traffic Manager; maintained \textbf{99.99\% availability} with automated BCDR
-    runbooks, on-call rotation, and full observability (Azure Monitor, Grafana, OpenTelemetry).
-  \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
-    CI/CD pipelines and progressive rollout tooling with smoke testing and automated rollback.
+  \item Own reliability and global operations of the \textbf{OneDrive/SharePoint Notifications
+    Service} — \textbf{6B+ events/month} across \textbf{M365, Teams, Viva, Whiteboard}, and
+    dozens of Microsoft products; globally deployed to every geo on AKS.
+  \item Led full platform migration: \textbf{Azure Cloud Services → Service Fabric → AKS}
+    without a single dropped message; halved compute footprint, saving \textbf{\$750K annually};
+    implemented \textbf{CPU-based KEDA autoscaling} that handled live-site traffic-spike incidents.
+  \item Moved from slot-based to \textbf{in-place deployments} via custom \textbf{ADO YAML
+    hotfix pipeline}; cut average deployment latency from \textbf{30+ days to under 10 days}
+    while maintaining global safe deployment practices across all geos.
+  \item Designed \textbf{BCDR automatic failover} using Azure FrontDoor \textbf{weighted
+    endpoints and health checks}; maintained \textbf{99.99\% availability}; migrated certs to
+    \textbf{autorotation with SNI auth} and implemented \textbf{KeyVault}-based encryption for
+    Service Bus messages.
+  \item First to ship \textbf{heuristic-based spam blocks} on the policy engine; blocked
+    \textbf{tens of millions of spam events} with zero impact to live traffic.
 \end{itemize}
 
 \vspace{2pt}
 
-\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
+\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure {\normalfont\textit{(promoted in 1.25 years)}}}{October 2020 – July 2022}
 \begin{itemize}
-  \item Designed and implemented \textbf{state-machine–driven settlement engine components}
-    in Python and C++, processing \textbf{trillions in annual transaction volume} across
-    distributed financial infrastructure.
-  \item Engineered \textbf{fault-tolerant, exactly-once processing} under concurrent load;
-    built real-time transaction observability pipelines and integration test suites for
-    high-criticality infrastructure in a strict \textbf{Linux production environment}.
+  \item Redesigned \textbf{settlement management system in C++}, communicating in real time
+    globally between \textbf{IBM z/OS mainframes}; complete technical ownership from design
+    through implementation with no oversight.
+  \item Developed \textbf{C++ prototype} for streaming transactional data from IBM z/OS to
+    Linux via \textbf{Kafka}; pioneered \textbf{git adoption on the mainframe} using Broadcom
+    Git Bridge; built QA tooling and test infrastructure for settlement systems.
 \end{itemize}
 
 \vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item Sole developer for a browser-based AR platform; \textbf{Node.js} backend with Redis
-    pub/sub managing \textbf{100+ concurrent WebSocket connections} and real-time distributed
-    state synchronization.
+  \item Sole developer of a blockchain + AR web card game: \textbf{Node.js} backend, Vue.js
+    frontend, SQLite — blockchain for public reward records, AR for in-game asset display.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
@@ -111,12 +112,12 @@ B.S.\ Computer Science
 \noindent
 \begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
-                                Azure FrontDoor, Azure DevOps, Git \\[2pt]
-  \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
-                                fault-tolerant state machines, queue-based scheduling \\[2pt]
-  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, SLO/error-budget
-                                design, distributed tracing, alerting, on-call \\
+  \textbf{Infrastructure}     & AKS, Kubernetes, KEDA, Azure FrontDoor, Azure Service Fabric,
+                                Azure KeyVault, Azure DevOps, Terraform, Helm \\[2pt]
+  \textbf{Distributed Systems}& High-scale event processing, message encryption, multi-region
+                                failover, BCDR, queue-based scheduling, Kafka \\[2pt]
+  \textbf{Reliability}        & 99.99\% availability, cert autorotation (SNI), secret management,
+                                in-place deployments, SLOs, on-call, incident response \\
 \end{tabular}
 
 \end{document}

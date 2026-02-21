@@ -61,42 +61,42 @@
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
 
-\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
+\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure {\normalfont\textit{(promoted in 1.25 years)}}}{October 2020 – July 2022}
 \begin{itemize}
-  \item Designed and implemented \textbf{state-machine–driven settlement engine components}
-    in \textbf{C++ and Python}, processing \textbf{trillions in annual transaction volume}
-    across distributed financial infrastructure with strict correctness guarantees.
-  \item Engineered \textbf{fault-tolerant, exactly-once processing} under concurrent load;
-    contributed to real-time transaction observability and analysis pipelines across
-    clearing and settlement systems.
-  \item Operated within a strict \textbf{Linux production environment}; diagnosed and resolved
-    complex distributed system failures under time pressure with direct financial impact.
+  \item Redesigned \textbf{settlement management system in C++}, communicating in real time
+    globally between \textbf{IBM z/OS mainframes}; complete technical ownership from design
+    through implementation — no oversight, full accountability for correctness and reliability.
+  \item Developed \textbf{C++ prototype} for streaming transactional data from IBM z/OS to
+    Linux via \textbf{Kafka}; built QA tooling and test infrastructure for the settlement system.
+  \item Pioneered \textbf{git adoption on the IBM mainframe} using Broadcom Git Bridge
+    technology; established version-control workflows for a historically unversioned codebase.
 \end{itemize}
 
 \vspace{2pt}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Infrastructure \& Scale, Notifications Service {\normalfont\textit{(promoted year-over-year)}}}{July 2022 – Present}
 \begin{itemize}
-  \item Own design and end-to-end reliability of distributed notification infrastructure
-    processing \textbf{6B+ events/month} across OneDrive and SharePoint on Linux-hosted
-    AKS clusters.
-  \item Designed \textbf{multi-region failover} architecture; maintained \textbf{99.99\%
-    availability} under continuous global load with automated BCDR runbooks and on-call rotation.
-  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth; reduced
-    tail latency and eliminated over-provisioning (\$500k–\$750k annual savings).
-  \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for cluster
-    provisioning and \textbf{Helm}-managed workload deployment; rebuilt infra-as-code pipelines
-    for safe, repeatable deploys at scale.
-  \item Built observability stack (Azure Monitor, Grafana, OpenTelemetry); defined SLOs,
-    alerting thresholds, distributed tracing, and runbooks with SRE teams.
+  \item Own reliability and global operations of the \textbf{OneDrive/SharePoint Notifications
+    Service} — \textbf{6B+ events/month} across M365, Teams, Viva, and dozens of products;
+    deployed to every geo worldwide.
+  \item Designed \textbf{BCDR automatic failover} using Azure FrontDoor \textbf{weighted endpoints
+    and health checks}; maintained \textbf{99.99\% availability} globally; implemented \textbf{cert
+    autorotation with SNI authentication} and \textbf{KeyVault}-based encryption of Service Bus
+    messages; added secret expiration alerting across all services.
+  \item Led full platform migration: \textbf{Azure Cloud Services → Service Fabric → AKS}
+    without a single dropped message; halved compute footprint, saving \textbf{\$750K annually};
+    implemented \textbf{CPU-based KEDA autoscaling} that handled live-site traffic-spike incidents.
+  \item Moved from slot-based to \textbf{in-place deployments} via custom \textbf{ADO YAML
+    hotfix pipeline}; cut average deployment latency from \textbf{30+ days to under 10 days}
+    while following global safe deployment practices.
 \end{itemize}
 
 \vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item Built \textbf{C++ and Python} systems infrastructure; developed concurrent data pipelines
-    and low-level tooling in a Linux production environment.
+  \item Sole developer of a blockchain + AR web card game: \textbf{Node.js} backend, Vue.js
+    frontend, SQLite — blockchain for public reward records, AR for in-game asset display.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
@@ -111,14 +111,12 @@ B.S.\ Computer Science
 \noindent
 \begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & \textbf{C++}, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
-  \textbf{Distributed Systems}& Fault-tolerant state machines, exactly-once processing,
-                                multi-region failover, high-scale event processing,
-                                queue-based scheduling \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm \\[2pt]
-  \textbf{Correctness \& Testing} & Unit \& integration testing, concurrent transaction
-                                    correctness, edge-case coverage \\[2pt]
-  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, SLO/error-budget design,
-                                on-call, incident response \\
+  \textbf{Systems}            & IBM z/OS mainframes, real-time global messaging, fault-tolerant
+                                state machines, exactly-once processing, Kafka \\[2pt]
+  \textbf{Infrastructure}     & AKS, Kubernetes, KEDA, Azure FrontDoor, Azure Service Fabric,
+                                Azure KeyVault, ADO, Terraform, Helm \\[2pt]
+  \textbf{Security \& Reliability} & Cert autorotation (SNI), message encryption (KeyVault),
+                                     secret management, 99.99\% availability, BCDR, on-call \\
 \end{tabular}
 
 \end{document}

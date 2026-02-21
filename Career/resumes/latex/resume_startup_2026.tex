@@ -61,41 +61,41 @@
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Infrastructure \& Scale, Notifications Service {\normalfont\textit{(promoted year-over-year)}}}{July 2022 – Present}
 \begin{itemize}
-  \item Sole owner of distributed notification infrastructure processing \textbf{6B+ events/month}
-    across OneDrive and SharePoint — designed, built, and operated end-to-end across
-    Linux-hosted AKS clusters.
-  \item Architected \textbf{KEDA-driven autoscaling} system from scratch; reduced tail latency
-    and cut over-provisioning spend by \textbf{\$500k–\$750k/year} through real-time queue-depth
-    scheduling.
-  \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
-    CI/CD pipelines and progressive rollout tooling with smoke testing and automated rollback.
-  \item Led full \textbf{AKS migration} of a 15-service platform — authored \textbf{Terraform}
-    modules for multi-region cluster provisioning and \textbf{Helm}-managed workloads;
-    zero downtime during cutover across production traffic.
-  \item Maintained \textbf{99.99\% availability} under global load; designed multi-region
-    failover and built end-to-end observability (OpenTelemetry, Grafana) with SLOs and
-    automated BCDR runbooks.
+  \item Sole infrastructure owner for the \textbf{OneDrive/SharePoint Notifications Service}
+    — \textbf{6B+ events/month} across \textbf{M365, Teams, Viva, Whiteboard}, and dozens
+    of Microsoft products; globally deployed to every geo, operated end-to-end.
+  \item Drove full platform migration: \textbf{Azure Cloud Services → Service Fabric → AKS}
+    without a single dropped message; halved compute footprint, saving \textbf{\$750K annually};
+    implemented \textbf{CPU-based KEDA autoscaling} that handled live traffic-spike incidents.
+  \item First to ship \textbf{heuristic-based spam blocks} on the policy engine; blocked
+    \textbf{tens of millions of spam events} with zero impact to live traffic; own hourly
+    deployments to internal test ring for partner validation before production.
+  \item Moved from slot-based to \textbf{in-place deployments} via custom \textbf{ADO YAML
+    hotfix pipeline}; cut deployment latency from \textbf{30+ days to under 10 days}
+    while maintaining global safe deployment practices across all geos.
+  \item Designed \textbf{BCDR automatic failover} (FrontDoor weighted endpoints), cert
+    \textbf{autorotation with SNI auth}, \textbf{KeyVault}-based Service Bus message encryption,
+    and secret expiration alerting; maintained \textbf{99.99\% availability} worldwide.
 \end{itemize}
 
 \vspace{2pt}
 
-\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
+\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure {\normalfont\textit{(promoted in 1.25 years)}}}{October 2020 – July 2022}
 \begin{itemize}
-  \item Designed and implemented settlement engine components in \textbf{Python and C++}
-    processing trillions in annual volume — fault-tolerant, exactly-once semantics
-    under concurrent load.
-  \item Built real-time transaction observability pipelines and comprehensive test suites
-    for high-criticality financial infrastructure.
+  \item Redesigned \textbf{settlement management system in C++} end-to-end — real-time global
+    comms between \textbf{IBM z/OS mainframes}; full technical ownership, no oversight.
+  \item Pioneered \textbf{git adoption on the IBM mainframe} using Broadcom Git Bridge;
+    developed \textbf{C++ Kafka prototype} for streaming mainframe transactional data to Linux.
 \end{itemize}
 
 \vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item \textbf{Full-stack solo build}: Node.js/Redis pub/sub backend with distributed
-    real-time state, Vue.js frontend — shipped end-to-end to production independently.
+  \item \textbf{Sole developer}: blockchain + AR web card game — \textbf{Node.js} backend,
+    Vue.js frontend, SQLite; blockchain for public reward records, AR for in-game asset display.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
@@ -110,12 +110,12 @@ B.S.\ Computer Science
 \noindent
 \begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
-                                Azure DevOps \\[2pt]
-  \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
-                                fault-tolerant state machines, queue-based scheduling \\[2pt]
-  \textbf{Observability}      & OpenTelemetry, Grafana, SLO/error-budget design,
-                                alerting, on-call, incident response \\
+  \textbf{Infrastructure}     & AKS, Kubernetes, KEDA, Azure Service Fabric, Azure FrontDoor,
+                                Azure KeyVault, Azure DevOps, Terraform, Helm \\[2pt]
+  \textbf{Distributed Systems}& High-scale event processing, Kafka, message encryption,
+                                multi-region failover, BCDR, queue-based scheduling \\[2pt]
+  \textbf{Reliability}        & Cert autorotation (SNI), secret management, in-place deployments,
+                                spam/abuse policy, SLOs, on-call, incident response \\
 \end{tabular}
 
 \end{document}
