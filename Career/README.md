@@ -7,7 +7,7 @@ Agent entry point. Read this file first before touching anything in this directo
 | Field | Value |
 |---|---|
 | Name | Liam Wood |
-| Location | Austin, TX (open to relocation) |
+| Location | Austin, TX — targeting NYC, Austin, Miami |
 | Email | general.lvwood@gmail.com |
 | Phone | (305) 790-9093 |
 | Current role | Software Engineer II — Platform Infrastructure @ Microsoft (July 2022–Present) |
@@ -35,7 +35,7 @@ Career/
 │   ├── cover_letter_finance_2026.md   ← Finance/HFT track
 │   └── cover_letter_startup_2026.md   ← Startup track
 ├── applications/
-│   └── applications_2026.csv          ← application tracker (319 rows)
+│   └── applications_2026.csv          ← application tracker (572 rows, location-filtered to NYC/Austin/Miami)
 └── scripts/
     └── scrape_jobs.py                 ← job scraper (re-run to append new roles)
 ```
@@ -64,12 +64,14 @@ Templates in `cover_letters/`. Substitute `[Company]` and `[Hiring Manager Name]
 `applications/applications_2026.csv` — columns:
 
 ```
-Company | Track | Role | URL | Status | Resume Variant | Cover Letter | Notes
+Company | Track | Role | URL | Status | Resume Variant | Cover Letter | Notes | Location
 ```
 
 Status lifecycle: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
 
 Track values: `BigTech`, `Finance`, `Startup`
+
+Location filter applied at scrape time: **New York, Austin, Miami, Remote**
 
 ## Scraper
 
@@ -81,9 +83,11 @@ python Career/scripts/scrape_jobs.py
 
 Sources scraped:
 - **Generic Playwright**: Google, Meta, Stripe, Cloudflare, AWS, Citadel, Jump Trading, Databricks, Rippling, Figma
-- **BuiltInAustin**: `builtinaustin.com/jobs?search=Senior+DevOps+Engineer` (3 pages, card-based)
-- **Jane Street JSON API**: `janestreet.com/jobs/main.json`
-- **Greenhouse API**: Anthropic (`anthropic`), Anduril (`andurilindustries`)
+- **BuiltInAustin**: `builtinaustin.com/jobs?search=Senior+DevOps+Engineer` (3 pages, card-based) — Austin location
+- **Jane Street JSON API**: `janestreet.com/jobs/main.json` — filters to NYC
+- **Greenhouse API**: Anthropic (`anthropic`), Anduril (`andurilindustries`), Virtu Financial (`virtu`) — filters by location
+- **HRT admin-ajax**: `hudsonrivertrading.com/wp-admin/admin-ajax.php` action=`get_hrt_jobs_handler` — requires fresh nonce from careers page (fetched automatically via Playwright)
+- **Ongig API**: Apex Fintech Solutions / Peak6 via `text-analyzer.ongig.com/api/external/v1/jobs/search` — token in embed script at `d171fmx844et9o.cloudfront.net/peak6/2.0/ongig-embed.umd.js`
 
 Setup (once):
 ```bash
