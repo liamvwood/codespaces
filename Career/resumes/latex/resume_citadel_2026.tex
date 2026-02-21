@@ -16,13 +16,13 @@
 
 %── Colours ───────────────────────────────────────────────────────────────────
 \definecolor{accent}{HTML}{1A1A2E}   % near-black navy
-\definecolor{rule}{HTML}{888888}
+\definecolor{rulecolor}{HTML}{888888}
 
 %── Section style ─────────────────────────────────────────────────────────────
 \titleformat{\section}
-  {\large\bfseries\color{accent}\uppercase}
-  {}{0em}{}
-  [\vspace{-4pt}\textcolor{rule}{\hrule height 0.5pt}\vspace{2pt}]
+  {\large\bfseries\color{accent}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{-4pt}\textcolor{rulecolor}{\hrule height 0.5pt}\vspace{2pt}]
 
 \titlespacing*{\section}{0pt}{10pt}{4pt}
 

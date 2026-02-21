@@ -1,16 +1,16 @@
 # Session Checkpoint
-**Written:** 2026-02-21T22:24:16Z
+**Written:** 2026-02-21T22:39:13Z
 
 ## Application Stats
 572 total | 278 to apply | 0 applied
 
 ## Recent Commits
 ```
+b07af40 update
 935baa2 Update startup cover letter with accurate work history
 02aa565 Rewrite all 3 resume variants with accurate work history
 3aa434b Move LaTeX build artifacts to gitignored obj/ directory
 b912275 Update CHECKPOINT with Tier 1 status table and pre-application checklist
-a499d90 Add company-specific cover letters for PayPal and Eloquent AI; flag Google URLs
 ```
 
 ## Session Notes
