@@ -64,8 +64,8 @@
 \job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
 \begin{itemize}
   \item Designed and implemented \textbf{state-machine–driven settlement engine components}
-    in Python and C++, processing \textbf{trillions in annual transaction volume} across
-    distributed financial infrastructure with strict correctness and consistency guarantees.
+    in \textbf{C++ and Python}, processing \textbf{trillions in annual transaction volume}
+    across distributed financial infrastructure with strict correctness and consistency guarantees.
   \item Engineered distributed systems requiring \textbf{fault-tolerant, exactly-once processing}
     under concurrent load; contributed to real-time transaction observability and analysis
     pipelines across clearing and settlement systems.
@@ -79,32 +79,28 @@
 
 \vspace{4pt}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
 \begin{itemize}
   \item Own design and end-to-end reliability of distributed notification infrastructure
     processing \textbf{6B+ events/month} across OneDrive and SharePoint, spanning dozens of
     interdependent services on Linux-hosted AKS clusters.
-  \item Designed \textbf{multi-region failover} architecture using Azure FrontDoor and Traffic
-    Manager; maintained \textbf{99.99\% availability} under continuous global load with automated
-    BCDR failover runbooks.
-  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth and traffic
-    patterns, reducing tail latency and eliminating over-provisioning waste
-    (\$500k–\$750k annual savings).
-  \item Led full \textbf{AKS migration and infrastructure re-architecture} — rebuilt
-    infra-as-code pipelines and cluster provisioning for safe, repeatable deployments at scale.
-  \item Built \textbf{process state observability} systems and incident dashboards; defined
-    alerting thresholds, runbooks, and on-call escalation paths with SRE teams.
-  \item Promoted twice in 3 years for technical leadership across reliability engineering,
-    cost optimization, and deployment safety.
+  \item Designed \textbf{multi-region failover} architecture; maintained \textbf{99.99\% availability}
+    under continuous global load with automated BCDR runbooks and on-call rotation.
+  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth; reduced
+    tail latency and eliminated over-provisioning (\$500k–\$750k annual savings).
+  \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for cluster
+    provisioning and \textbf{Helm}-managed workload deployment; rebuilt infra-as-code
+    pipelines for safe, repeatable deploys at scale.
+  \item Built observability stack (Azure Monitor, Grafana, OpenTelemetry); defined SLOs,
+    alerting thresholds, distributed tracing, and runbooks with SRE teams.
 \end{itemize}
 
 \vspace{4pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item Built a \textbf{Node.js backend} with Redis pub/sub managing \textbf{100+ concurrent
-    WebSocket connections} and real-time distributed state synchronization for a
-    browser-based AR platform.
+  \item Built \textbf{C++ and Python} systems infrastructure; developed concurrent data pipelines
+    and low-level tooling in a Linux production environment.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
@@ -118,16 +114,15 @@ B.S.\ Computer Science
 
 \noindent
 \begin{tabular}{@{}p{2.2in}p{4.5in}}
-  \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
+  \textbf{Languages}          & \textbf{C++}, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
   \textbf{Distributed Systems}& Fault-tolerant state machines, exactly-once processing,
                                 multi-region failover, high-scale event processing,
                                 queue-based scheduling \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Azure FrontDoor,
-                                Azure DevOps, BCDR Planning \\[2pt]
+  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm \\[2pt]
   \textbf{Correctness \& Testing} & Unit \& integration testing, concurrent transaction
                                     correctness, edge-case coverage \\[2pt]
-  \textbf{Observability}      & Process state monitoring, alerting design, incident response,
-                                SRE collaboration \\
+  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, SLO/error-budget design,
+                                on-call, incident response \\
 \end{tabular}
 
 \end{document}

@@ -61,29 +61,27 @@
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
 \begin{itemize}
   \item Own design and end-to-end reliability of distributed event-processing infrastructure
     handling \textbf{6B+ events/month} across OneDrive and SharePoint, spanning dozens of
-    interdependent services on Linux-hosted \textbf{AKS clusters}.
+    interdependent services on Linux-hosted \textbf{AKS clusters}; define and enforce
+    \textbf{SLOs and error budgets} with SRE teams.
   \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth and traffic
     patterns, eliminating over-provisioning waste and reducing tail latency
     (\textbf{\$500k–\$750k annual cost savings}).
   \item Owned \textbf{CI/CD pipelines} (Azure DevOps, Git) and progressive rollout tooling,
     improving release cadence from 6-week cycles to \textbf{weekly deployments} with integrated
     smoke testing and automated rollback.
-  \item Led full \textbf{AKS migration} and deployment re-architecture — rebuilt infra-as-code
-    pipelines and cluster provisioning to support safe, repeatable deployments at scale.
-  \item Designed \textbf{multi-region failover} architecture using Azure FrontDoor and Traffic
-    Manager; maintained \textbf{99.99\% availability} under continuous global load with automated
-    BCDR failover runbooks.
-  \item Built and maintained \textbf{process state observability} systems and incident dashboards;
-    collaborated with SRE teams to define alerting thresholds, runbooks, and on-call
-    escalation paths.
-  \item Collaborated with partner engineering teams worldwide to safely enable new
-    customer-facing features through design, testing, and staged rollout.
-  \item Promoted twice in 3 years for technical leadership across reliability, cost
-    optimization, and deployment safety.
+  \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for multi-region
+    cluster provisioning, \textbf{Helm}-managed workloads, node pool autoscaling, and pod
+    disruption budgets; rebuilt infra-as-code pipelines for safe, repeatable deploys at scale.
+  \item Designed \textbf{multi-region failover} with Azure FrontDoor (anycast routing, TLS
+    offload, WAF policies) and Traffic Manager; maintained \textbf{99.99\% availability}
+    under continuous global load with automated BCDR runbooks and on-call rotation.
+  \item Built \textbf{end-to-end observability} stack (Azure Monitor, Grafana, OpenTelemetry
+    instrumentation); defined alerting thresholds, distributed tracing, and incident dashboards
+    for a zero-downtime production system.
 \end{itemize}
 
 \vspace{4pt}
@@ -122,14 +120,14 @@ development and CS fundamentals.
 \noindent
 \begin{tabular}{@{}p{2.2in}p{4.5in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Azure FrontDoor,
-                                Azure DevOps, BCDR Planning \\[2pt]
+  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
+                                Azure FrontDoor, Azure DevOps, BCDR Planning \\[2pt]
   \textbf{Distributed Systems}& High-scale event processing (6B+ events/month), multi-region
                                 failover, fault-tolerant state machines, queue-based scheduling \\[2pt]
   \textbf{CI/CD \& Tooling}   & Azure DevOps, Git, progressive rollout, automated rollback,
                                 smoke testing, integration \& regression testing \\[2pt]
-  \textbf{Observability}      & Process state monitoring, alerting design, incident response,
-                                SRE collaboration \\
+  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, distributed tracing,
+                                SLO/error-budget design, alerting, on-call, incident response \\
 \end{tabular}
 
 \end{document}

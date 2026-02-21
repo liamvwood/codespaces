@@ -61,7 +61,7 @@
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
 
-\job{Microsoft}{Software Engineer II — Platform Infrastructure}{July 2022 – Present}
+\job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
 \begin{itemize}
   \item Sole owner of distributed notification infrastructure processing \textbf{6B+ events/month}
     across OneDrive and SharePoint — designed, built, and operated end-to-end across
@@ -72,12 +72,12 @@
   \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
     CI/CD pipelines (Azure DevOps, Git) and progressive rollout tooling with smoke testing
     and automated rollback.
-  \item Led full \textbf{AKS migration} and infrastructure re-architecture — redesigned
-    infra-as-code pipelines and cluster provisioning for repeatable deployments at scale.
-  \item Maintained \textbf{99.99\% availability} under global load by designing multi-region
-    failover with Azure FrontDoor and Traffic Manager, including automated BCDR runbooks.
-  \item Promoted twice in 3 years; drove technical decisions across reliability,
-    cost, and delivery velocity with minimal management overhead.
+  \item Led full \textbf{AKS migration} of a 15-service platform — authored \textbf{Terraform}
+    modules for multi-region cluster provisioning and \textbf{Helm}-managed workloads;
+    zero downtime during cutover across production traffic.
+  \item Maintained \textbf{99.99\% availability} under global load; designed multi-region
+    failover and built end-to-end observability (OpenTelemetry, Grafana) with SLOs and
+    automated BCDR runbooks.
 \end{itemize}
 
 \vspace{4pt}
@@ -95,9 +95,8 @@
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item \textbf{Full-stack solo build}: Node.js backend (Redis pub/sub, \textbf{100+ concurrent
-    WebSocket connections}), Vue.js frontend with WebAR integration — shipped a
-    production browser-based AR/blockchain card game platform end-to-end.
+  \item \textbf{Full-stack solo build}: Node.js/Redis pub/sub backend with distributed
+    real-time state, Vue.js frontend — shipped end-to-end to production independently.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
@@ -114,14 +113,14 @@ development and CS fundamentals.
 \noindent
 \begin{tabular}{@{}p{2.2in}p{4.5in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
-  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Azure FrontDoor,
-                                Azure DevOps, BCDR Planning \\[2pt]
+  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
+                                Azure DevOps \\[2pt]
   \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
                                 fault-tolerant state machines, queue-based scheduling \\[2pt]
   \textbf{CI/CD \& Delivery}  & Azure DevOps, Git, progressive rollout, automated rollback,
                                 weekly release cadence \\[2pt]
-  \textbf{Observability}      & Process state monitoring, alerting design, incident response,
-                                SRE collaboration \\
+  \textbf{Observability}      & OpenTelemetry, Grafana, SLO/error-budget design,
+                                alerting, on-call, incident response \\
 \end{tabular}
 
 \end{document}
