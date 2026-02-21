@@ -1,0 +1,127 @@
+%──────────────────────────────────────────────────────────────────────────────
+%  Liam Wood — Resume
+%  Target: Senior Platform / Infrastructure Engineer — Startups
+%  (Databricks, Anduril, Rippling, Fly.io, Modal, Figma)
+%──────────────────────────────────────────────────────────────────────────────
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=0.55in, bottom=0.55in, left=0.70in, right=0.70in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+%── Colours ───────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A1A2E}
+\definecolor{rule}{HTML}{888888}
+
+%── Section style ─────────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}\uppercase}
+  {}{0em}{}
+  [\vspace{-4pt}\textcolor{rule}{\hrule height 0.5pt}\vspace{2pt}]
+
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+%── List style ────────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.4em,
+  itemsep=1pt,
+  parsep=0pt,
+  topsep=2pt,
+  label=\textbullet
+}
+
+%── Helpers ───────────────────────────────────────────────────────────────────
+\newcommand{\job}[3]{%
+  \noindent\textbf{#1} \hfill \textit{#3} \\
+  \textit{#2}
+  \vspace{2pt}
+}
+
+\pagestyle{empty}
+
+%──────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+%── Header ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries\color{accent} Liam Wood}\\[4pt]
+  Austin, TX \;|\;
+  \href{tel:13057909093}{(305) 790-9093} \;|\;
+  \href{mailto:general.lvwood@gmail.com}{general.lvwood@gmail.com}
+\end{center}
+
+\vspace{2pt}
+
+%── Experience ────────────────────────────────────────────────────────────────
+\section{Experience}
+
+\job{Microsoft}{Software Engineer II — Platform Infrastructure}{July 2022 – Present}
+\begin{itemize}
+  \item Sole owner of distributed notification infrastructure processing \textbf{6B+ events/month}
+    across OneDrive and SharePoint — designed, built, and operated end-to-end across
+    Linux-hosted AKS clusters.
+  \item Architected \textbf{KEDA-driven autoscaling} system from scratch; reduced tail latency
+    and cut over-provisioning spend by \textbf{\$500k–\$750k/year} through real-time queue-depth
+    scheduling.
+  \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
+    CI/CD pipelines (Azure DevOps, Git) and progressive rollout tooling with smoke testing
+    and automated rollback.
+  \item Led full \textbf{AKS migration} and infrastructure re-architecture — redesigned
+    infra-as-code pipelines and cluster provisioning for repeatable deployments at scale.
+  \item Maintained \textbf{99.99\% availability} under global load by designing multi-region
+    failover with Azure FrontDoor and Traffic Manager, including automated BCDR runbooks.
+  \item Promoted twice in 3 years; drove technical decisions across reliability,
+    cost, and delivery velocity with minimal management overhead.
+\end{itemize}
+
+\vspace{4pt}
+
+\job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
+\begin{itemize}
+  \item Designed and implemented settlement engine components in \textbf{Python and C++}
+    processing trillions in annual volume — fault-tolerant, exactly-once semantics
+    under concurrent load.
+  \item Built real-time transaction observability pipelines and comprehensive test suites
+    for high-criticality financial infrastructure.
+\end{itemize}
+
+\vspace{4pt}
+
+\job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
+\begin{itemize}
+  \item \textbf{Full-stack solo build}: Node.js backend (Redis pub/sub, \textbf{100+ concurrent
+    WebSocket connections}), Vue.js frontend with WebAR integration — shipped a
+    production browser-based AR/blockchain card game platform end-to-end.
+\end{itemize}
+
+%── Education ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\noindent\textbf{University of Florida} \hfill \textit{August 2018 – May 2022}\\
+B.S.\ Computer Science\\[2pt]
+Vice President, GatorVR — led technical workshops and mentored students in VR/AR
+development and CS fundamentals.
+
+%── Skills ────────────────────────────────────────────────────────────────────
+\section{Skills}
+
+\noindent
+\begin{tabular}{@{}p{2.2in}p{4.5in}}
+  \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
+  \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Azure FrontDoor,
+                                Azure DevOps, BCDR Planning \\[2pt]
+  \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
+                                fault-tolerant state machines, queue-based scheduling \\[2pt]
+  \textbf{CI/CD \& Delivery}  & Azure DevOps, Git, progressive rollout, automated rollback,
+                                weekly release cadence \\[2pt]
+  \textbf{Observability}      & Process state monitoring, alerting design, incident response,
+                                SRE collaboration \\
+\end{tabular}
+
+\end{document}
