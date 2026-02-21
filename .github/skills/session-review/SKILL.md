@@ -26,7 +26,42 @@ stored at:
   plan.md          — implementation plan (if one was created)
 ```
 
+If no session ID is provided, run Step 0 to discover sessions awaiting review.
+
 ## Review Process
+
+### Step 0 — Discover sessions (run when no session ID is given)
+List all sessions and cross-reference with already-reviewed ones:
+```bash
+python3 - << 'PYEOF'
+import os, json
+from pathlib import Path
+
+state_dir = Path.home() / ".copilot/session-state"
+reviews_dir = Path("/workspaces/codespaces/.github/session_reviews")
+reviewed = {p.stem for p in reviews_dir.glob("*.md")} if reviews_dir.exists() else set()
+
+current_session = os.environ.get("COPILOT_SESSION_ID", "")
+sessions = []
+for d in sorted(state_dir.iterdir()):
+    if not d.is_dir():
+        continue
+    sid = d.name
+    if sid == current_session:
+        continue
+    meta = {}
+    wy = d / "workspace.yaml"
+    if wy.exists():
+        for line in wy.read_text().splitlines():
+            if line.startswith("summary:"):
+                meta["summary"] = line.split(":", 1)[1].strip()
+            if line.startswith("startedAt:") or line.startswith("started_at:") or line.startswith("created_at:"):
+                meta["date"] = line.split(":", 1)[1].strip()
+    status = "✅ reviewed" if sid in reviewed else "⏳ needs review"
+    print(f"{status}  {sid}  {meta.get('date','?')}  {meta.get('summary','(no summary)')[:80]}")
+PYEOF
+```
+Pick the most recent unreviewed session and proceed with that ID.
 
 ### Step 1 — Read session metadata
 ```bash
