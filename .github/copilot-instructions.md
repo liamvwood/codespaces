@@ -1,32 +1,18 @@
 # GitHub Copilot Instructions
 
-## Repository Purpose
-This is **Liam Wood's** personal career repository for the 2026 job search.
+## Repository
+Personal workspace for **Liam Wood** — contains independent projects in separate
+top-level directories. Each directory may have its own `.github/copilot-instructions.md`
+with context specific to that project; read it before working in that directory.
 
-## Agent Entry Point
-**Read `Career/README.md` first.** It is the single source of truth for directory
-structure, file paths, resume variant guide, cover letter templates, scraper usage,
-and candidate facts. This file intentionally stays brief.
+## General Conventions
+- Filenames: `snake_case`
+- Commit messages: concise imperative summary line, details in body
+- Secrets and credentials must never be committed
 
-## Owner Profile
-- **Name:** Liam Wood | Austin, TX (open to relocation)
-- **Email:** general.lvwood@gmail.com | **Phone:** (305) 790-9093
-- **Current role:** Software Engineer II — Platform Infrastructure @ Microsoft (July 2022–Present)
-- **Target roles:** Senior Platform / Infrastructure Engineer
-- **Target companies:** Big Tech, Finance/HFT, high-growth startups
+## Top-Level Directories
 
-## Key Paths (quick reference)
-
-| What | Path |
-|---|---|
-| Full structure + usage guide | `Career/README.md` |
-| Resume source files (LaTeX) | `Career/resumes/latex/` |
-| Cover letter templates | `Career/cover_letters/` |
-| Application tracker (CSV) | `Career/applications/applications_2026.csv` |
-| Job scraper | `Career/scripts/scrape_jobs.py` |
-
-## Naming Conventions
-- All filenames: `snake_case` (e.g. `resume_bigtech_2026.tex`, `cover_letter_finance_2026.md`)
-- Track values in CSV: `BigTech`, `Finance`, `Startup`
-- Status lifecycle: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
+| Directory | Purpose | Instructions |
+|---|---|---|
+| `Career/` | 2026 job search — resumes, cover letters, applications tracker, scraper | `Career/.github/copilot-instructions.md` |
 
