@@ -3,9 +3,9 @@
 %  Target: Senior Platform / Infrastructure Engineer — Startups
 %  (Databricks, Anduril, Rippling, Fly.io, Modal, Figma)
 %──────────────────────────────────────────────────────────────────────────────
-\documentclass[11pt, letterpaper]{article}
+\documentclass[10pt, letterpaper]{article}
 
-\usepackage[top=0.55in, bottom=0.55in, left=0.70in, right=0.70in]{geometry}
+\usepackage[top=0.45in, bottom=0.45in, left=0.65in, right=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -25,14 +25,14 @@
   {}{0em}{}
   [\vspace{-4pt}\textcolor{rule}{\hrule height 0.5pt}\vspace{2pt}]
 
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
 
 %── List style ────────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin=1.4em,
-  itemsep=1pt,
+  itemsep=0pt,
   parsep=0pt,
-  topsep=2pt,
+  topsep=1pt,
   label=\textbullet
 }
 
@@ -56,7 +56,7 @@
   \href{mailto:general.lvwood@gmail.com}{general.lvwood@gmail.com}
 \end{center}
 
-\vspace{2pt}
+\vspace{1pt}
 
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
@@ -70,8 +70,7 @@
     and cut over-provisioning spend by \textbf{\$500k–\$750k/year} through real-time queue-depth
     scheduling.
   \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
-    CI/CD pipelines (Azure DevOps, Git) and progressive rollout tooling with smoke testing
-    and automated rollback.
+    CI/CD pipelines and progressive rollout tooling with smoke testing and automated rollback.
   \item Led full \textbf{AKS migration} of a 15-service platform — authored \textbf{Terraform}
     modules for multi-region cluster provisioning and \textbf{Helm}-managed workloads;
     zero downtime during cutover across production traffic.
@@ -80,7 +79,7 @@
     automated BCDR runbooks.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
 \begin{itemize}
@@ -91,7 +90,7 @@
     for high-criticality financial infrastructure.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
@@ -103,22 +102,18 @@
 \section{Education}
 
 \noindent\textbf{University of Florida} \hfill \textit{August 2018 – May 2022}\\
-B.S.\ Computer Science\\[2pt]
-Vice President, GatorVR — led technical workshops and mentored students in VR/AR
-development and CS fundamentals.
+B.S.\ Computer Science
 
 %── Skills ────────────────────────────────────────────────────────────────────
 \section{Skills}
 
 \noindent
-\begin{tabular}{@{}p{2.2in}p{4.5in}}
+\begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
   \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
                                 Azure DevOps \\[2pt]
   \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
                                 fault-tolerant state machines, queue-based scheduling \\[2pt]
-  \textbf{CI/CD \& Delivery}  & Azure DevOps, Git, progressive rollout, automated rollback,
-                                weekly release cadence \\[2pt]
   \textbf{Observability}      & OpenTelemetry, Grafana, SLO/error-budget design,
                                 alerting, on-call, incident response \\
 \end{tabular}

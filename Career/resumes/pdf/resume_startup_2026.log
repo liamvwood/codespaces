@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.21)  21 FEB 2026 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.21)  21 FEB 2026 20:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
 \c@section=\count188
@@ -306,7 +306,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box54
 )
-No file resume_startup_2026.aux.
+(../pdf/resume_startup_2026.aux)
 \openout1 = `resume_startup_2026.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -327,6 +327,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -335,23 +336,23 @@ LaTeX Font Info:    ... okay on input line 49.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(50.58878pt, 513.11745pt, 50.58878pt)
-* v-part:(T,H,B)=(39.74872pt, 715.47255pt, 39.74872pt)
+* h-part:(L,W,R)=(46.97505pt, 520.3449pt, 46.97505pt)
+* v-part:(T,H,B)=(32.52127pt, 729.92744pt, 32.52127pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=513.11745pt
-* \textheight=715.47255pt
-* \oddsidemargin=-21.68121pt
-* \evensidemargin=-21.68121pt
-* \topmargin=-69.52127pt
+* \textwidth=520.3449pt
+* \textheight=729.92744pt
+* \oddsidemargin=-25.29494pt
+* \evensidemargin=-25.29494pt
+* \topmargin=-76.74872pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -396,6 +397,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 \everyMPtoPDFconversion=\toks24
 )
 Package hyperref Info: Link coloring OFF on input line 49.
+ (../pdf/resume_startup_2026.out) (../pdf/resume_startup_2026.out)
 \@outlinefile=\write3
 \openout3 = `resume_startup_2026.out'.
 
@@ -424,7 +426,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 \section{Education}
+l.102 \section{Education}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -436,75 +438,67 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.111 \section{Skills}
+l.108 \section{Skills}
                       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-14.
+11.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-14.
+11.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-114.
+111.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-114.
+111.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 114.
+(Font)              <10> on input line 111.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 114.
+(Font)              <7> on input line 111.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 114.
+(Font)              <5> on input line 111.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [2]
-(/workspaces/codespaces/Career/resumes/pdf/resume_startup_2026.aux)
+dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (../pdf/re
+sume_startup_2026.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-Package rerunfilecheck Warning: File `resume_startup_2026.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resume_startup_2026.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A99DD5D9141405C3396C292CBFF0AB66;254.
+Package rerunfilecheck Info: File `resume_startup_2026.out' has not changed.
+(rerunfilecheck)             Checksum: A99DD5D9141405C3396C292CBFF0AB66;254.
  ) 
 Here is how much of TeX's memory you used:
- 11844 strings out of 476182
- 187127 string characters out of 5795595
- 1937975 words of memory out of 5000000
- 33661 multiletter control sequences out of 15000+600000
- 595560 words of font info for 87 fonts, out of 8000000 for 9000
+ 11854 strings out of 476182
+ 187163 string characters out of 5795595
+ 1938975 words of memory out of 5000000
+ 33666 multiletter control sequences out of 15000+600000
+ 595230 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,8n,79p,1208b,444s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1208b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on /workspaces/codespaces/Career/resumes/pdf/resume_startup_2026
-.pdf (2 pages, 117184 bytes).
+Output written on ../pdf/resume_startup_2026.pdf (1 page, 116383 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 22529 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 22553 words of extra memory for PDF output out of 24883 (max. 10000000)
 

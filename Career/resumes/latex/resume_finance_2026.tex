@@ -3,9 +3,9 @@
 %  Target: Infrastructure / Systems Engineer — Finance & HFT
 %  (Jane Street, Two Sigma, Jump Trading, HRT, Citadel)
 %──────────────────────────────────────────────────────────────────────────────
-\documentclass[11pt, letterpaper]{article}
+\documentclass[10pt, letterpaper]{article}
 
-\usepackage[top=0.55in, bottom=0.55in, left=0.70in, right=0.70in]{geometry}
+\usepackage[top=0.45in, bottom=0.45in, left=0.65in, right=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -25,14 +25,14 @@
   {}{0em}{}
   [\vspace{-4pt}\textcolor{rule}{\hrule height 0.5pt}\vspace{2pt}]
 
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
 
 %── List style ────────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin=1.4em,
-  itemsep=1pt,
+  itemsep=0pt,
   parsep=0pt,
-  topsep=2pt,
+  topsep=1pt,
   label=\textbullet
 }
 
@@ -56,7 +56,7 @@
   \href{mailto:general.lvwood@gmail.com}{general.lvwood@gmail.com}
 \end{center}
 
-\vspace{2pt}
+\vspace{1pt}
 
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
@@ -65,37 +65,33 @@
 \begin{itemize}
   \item Designed and implemented \textbf{state-machine–driven settlement engine components}
     in \textbf{C++ and Python}, processing \textbf{trillions in annual transaction volume}
-    across distributed financial infrastructure with strict correctness and consistency guarantees.
-  \item Engineered distributed systems requiring \textbf{fault-tolerant, exactly-once processing}
-    under concurrent load; contributed to real-time transaction observability and analysis
-    pipelines across clearing and settlement systems.
-  \item Built comprehensive \textbf{unit and integration test suites} for high-criticality
-    financial infrastructure, ensuring correctness and full edge-case coverage for
-    concurrent transaction flows.
-  \item Operated within a strict \textbf{Linux-based production environment}; diagnosed and
-    resolved complex distributed system failures under time pressure with direct
-    financial impact.
+    across distributed financial infrastructure with strict correctness guarantees.
+  \item Engineered \textbf{fault-tolerant, exactly-once processing} under concurrent load;
+    contributed to real-time transaction observability and analysis pipelines across
+    clearing and settlement systems.
+  \item Operated within a strict \textbf{Linux production environment}; diagnosed and resolved
+    complex distributed system failures under time pressure with direct financial impact.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
 \begin{itemize}
   \item Own design and end-to-end reliability of distributed notification infrastructure
-    processing \textbf{6B+ events/month} across OneDrive and SharePoint, spanning dozens of
-    interdependent services on Linux-hosted AKS clusters.
-  \item Designed \textbf{multi-region failover} architecture; maintained \textbf{99.99\% availability}
-    under continuous global load with automated BCDR runbooks and on-call rotation.
+    processing \textbf{6B+ events/month} across OneDrive and SharePoint on Linux-hosted
+    AKS clusters.
+  \item Designed \textbf{multi-region failover} architecture; maintained \textbf{99.99\%
+    availability} under continuous global load with automated BCDR runbooks and on-call rotation.
   \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth; reduced
     tail latency and eliminated over-provisioning (\$500k–\$750k annual savings).
   \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for cluster
-    provisioning and \textbf{Helm}-managed workload deployment; rebuilt infra-as-code
-    pipelines for safe, repeatable deploys at scale.
+    provisioning and \textbf{Helm}-managed workload deployment; rebuilt infra-as-code pipelines
+    for safe, repeatable deploys at scale.
   \item Built observability stack (Azure Monitor, Grafana, OpenTelemetry); defined SLOs,
     alerting thresholds, distributed tracing, and runbooks with SRE teams.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
@@ -113,7 +109,7 @@ B.S.\ Computer Science
 \section{Skills}
 
 \noindent
-\begin{tabular}{@{}p{2.2in}p{4.5in}}
+\begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & \textbf{C++}, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
   \textbf{Distributed Systems}& Fault-tolerant state machines, exactly-once processing,
                                 multi-region failover, high-scale event processing,

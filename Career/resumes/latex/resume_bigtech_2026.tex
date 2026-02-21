@@ -3,9 +3,9 @@
 %  Target: Senior Platform / Infrastructure Engineer — Big Tech
 %  (Google, Meta, Apple, AWS, Stripe, Cloudflare)
 %──────────────────────────────────────────────────────────────────────────────
-\documentclass[11pt, letterpaper]{article}
+\documentclass[10pt, letterpaper]{article}
 
-\usepackage[top=0.55in, bottom=0.55in, left=0.70in, right=0.70in]{geometry}
+\usepackage[top=0.45in, bottom=0.45in, left=0.65in, right=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -25,14 +25,14 @@
   {}{0em}{}
   [\vspace{-4pt}\textcolor{rule}{\hrule height 0.5pt}\vspace{2pt}]
 
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
 
 %── List style ────────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin=1.4em,
-  itemsep=1pt,
+  itemsep=0pt,
   parsep=0pt,
-  topsep=2pt,
+  topsep=1pt,
   label=\textbullet
 }
 
@@ -56,7 +56,7 @@
   \href{mailto:general.lvwood@gmail.com}{general.lvwood@gmail.com}
 \end{center}
 
-\vspace{2pt}
+\vspace{1pt}
 
 %── Experience ────────────────────────────────────────────────────────────────
 \section{Experience}
@@ -64,70 +64,59 @@
 \job{Microsoft}{Software Engineer II — Platform Infrastructure {\normalfont\textit{(promoted twice in 3 years)}}}{July 2022 – Present}
 \begin{itemize}
   \item Own design and end-to-end reliability of distributed event-processing infrastructure
-    handling \textbf{6B+ events/month} across OneDrive and SharePoint, spanning dozens of
-    interdependent services on Linux-hosted \textbf{AKS clusters}; define and enforce
-    \textbf{SLOs and error budgets} with SRE teams.
-  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth and traffic
-    patterns, eliminating over-provisioning waste and reducing tail latency
-    (\textbf{\$500k–\$750k annual cost savings}).
-  \item Owned \textbf{CI/CD pipelines} (Azure DevOps, Git) and progressive rollout tooling,
-    improving release cadence from 6-week cycles to \textbf{weekly deployments} with integrated
-    smoke testing and automated rollback.
+    handling \textbf{6B+ events/month} across OneDrive and SharePoint on Linux-hosted
+    \textbf{AKS clusters}; define and enforce \textbf{SLOs and error budgets} with SRE teams.
+  \item Architected \textbf{KEDA-driven autoscaling} tied to real-time queue depth,
+    eliminating over-provisioning and reducing tail latency (\textbf{\$500k–\$750k annual savings}).
   \item Led full \textbf{AKS migration} — authored \textbf{Terraform} modules for multi-region
-    cluster provisioning, \textbf{Helm}-managed workloads, node pool autoscaling, and pod
-    disruption budgets; rebuilt infra-as-code pipelines for safe, repeatable deploys at scale.
-  \item Designed \textbf{multi-region failover} with Azure FrontDoor (anycast routing, TLS
-    offload, WAF policies) and Traffic Manager; maintained \textbf{99.99\% availability}
-    under continuous global load with automated BCDR runbooks and on-call rotation.
-  \item Built \textbf{end-to-end observability} stack (Azure Monitor, Grafana, OpenTelemetry
-    instrumentation); defined alerting thresholds, distributed tracing, and incident dashboards
-    for a zero-downtime production system.
+    cluster provisioning, \textbf{Helm}-managed workloads, and pod disruption budgets;
+    rebuilt infra-as-code pipelines for safe, repeatable deploys at scale.
+  \item Designed \textbf{multi-region failover} with Azure FrontDoor (anycast routing, TLS offload,
+    WAF) and Traffic Manager; maintained \textbf{99.99\% availability} with automated BCDR
+    runbooks, on-call rotation, and full observability (Azure Monitor, Grafana, OpenTelemetry).
+  \item Drove release cadence from \textbf{6-week cycles to weekly deployments} by owning
+    CI/CD pipelines and progressive rollout tooling with smoke testing and automated rollback.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Visa}{Senior Software Engineer — Clearing \& Settlement Infrastructure}{October 2020 – July 2022}
 \begin{itemize}
   \item Designed and implemented \textbf{state-machine–driven settlement engine components}
     in Python and C++, processing \textbf{trillions in annual transaction volume} across
     distributed financial infrastructure.
-  \item Engineered distributed systems requiring \textbf{fault-tolerant, exactly-once processing}
-    under concurrent load; built early real-time transaction observability pipelines.
-  \item Operated within a strict \textbf{Linux-based production environment}; diagnosed and
-    resolved complex distributed failures with direct financial impact under time pressure.
+  \item Engineered \textbf{fault-tolerant, exactly-once processing} under concurrent load;
+    built real-time transaction observability pipelines and integration test suites for
+    high-criticality infrastructure in a strict \textbf{Linux production environment}.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \job{Digital Worlds Institute — University of Florida}{Software Developer}{August 2019 – February 2020}
 \begin{itemize}
-  \item Sole developer for a browser-based AR platform; built a \textbf{Node.js backend} with
-    Redis pub/sub managing \textbf{100+ concurrent WebSocket connections} and real-time
-    distributed state synchronization.
+  \item Sole developer for a browser-based AR platform; \textbf{Node.js} backend with Redis
+    pub/sub managing \textbf{100+ concurrent WebSocket connections} and real-time distributed
+    state synchronization.
 \end{itemize}
 
 %── Education ─────────────────────────────────────────────────────────────────
 \section{Education}
 
 \noindent\textbf{University of Florida} \hfill \textit{August 2018 – May 2022}\\
-B.S.\ Computer Science\\[2pt]
-Vice President, GatorVR — led technical workshops and mentored students in VR/AR
-development and CS fundamentals.
+B.S.\ Computer Science
 
 %── Skills ────────────────────────────────────────────────────────────────────
 \section{Skills}
 
 \noindent
-\begin{tabular}{@{}p{2.2in}p{4.5in}}
+\begin{tabular}{@{}p{2.0in}p{4.7in}}
   \textbf{Languages}          & C++, Python, C\#/.NET, Node.js, JavaScript \\[2pt]
   \textbf{Infrastructure}     & Linux (AKS/bare-metal), Kubernetes, KEDA, Terraform, Helm,
-                                Azure FrontDoor, Azure DevOps, BCDR Planning \\[2pt]
-  \textbf{Distributed Systems}& High-scale event processing (6B+ events/month), multi-region
-                                failover, fault-tolerant state machines, queue-based scheduling \\[2pt]
-  \textbf{CI/CD \& Tooling}   & Azure DevOps, Git, progressive rollout, automated rollback,
-                                smoke testing, integration \& regression testing \\[2pt]
-  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, distributed tracing,
-                                SLO/error-budget design, alerting, on-call, incident response \\
+                                Azure FrontDoor, Azure DevOps, Git \\[2pt]
+  \textbf{Distributed Systems}& High-scale event processing, multi-region failover,
+                                fault-tolerant state machines, queue-based scheduling \\[2pt]
+  \textbf{Observability}      & OpenTelemetry, Azure Monitor, Grafana, SLO/error-budget
+                                design, distributed tracing, alerting, on-call \\
 \end{tabular}
 
 \end{document}
