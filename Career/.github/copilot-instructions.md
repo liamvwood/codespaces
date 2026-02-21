@@ -42,8 +42,14 @@ Always replace `[Hiring Manager Name]` before use.
 - Status lifecycle: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
 - Notes: `Tier 1` = apply immediately (company-specific cover letter ready); `Tier 2` = apply this week
 
+## Job Search Preferences
+- **Target locations:** NYC, Austin TX, Miami, Remote — always filter scraped/searched roles to these locations only.
+- **Target seniority:** Senior IC (L5/L6 equivalent) — skip roles below Senior or above Staff unless explicitly asked.
+- **Scripts and output files:** Always write to the repo (never `/tmp/`). Scripts go in `Career/scripts/`, output in `Career/applications/`.
+
 ## Token Economy
 - **Read `Career/README.md` first** — it is the authoritative source; don't re-ask what the agent can read.
+- If prompted to "pick up", "resume", or "continue where you left off" — read `Career/CHECKPOINT.md` first.
 - Use the `explore` agent for any lookup question ("which companies have cover letters?", "what's in this resume?").
 - Never load the full `applications_2026.csv` into the main context; use the `application-tracker` agent.
 - Prefer the `task` agent to run the scraper or compile LaTeX — keeps verbose output out of main context.
@@ -54,3 +60,4 @@ Always replace `[Hiring Manager Name]` before use.
   `Company, Track, Role, URL, Status, Resume Variant, Cover Letter, Notes, Location` (9 columns).
   Valid `Status` values: `To Apply`, `Applied`, `Phone Screen`, `Interview`, `Offer`, `Rejected`.
 - **Cover letters:** Always confirm `[Hiring Manager Name]` has been replaced before marking a letter as ready.
+- **Resumes:** Always run the `recruiter` agent review before marking a resume variant ready to send to any company.

@@ -8,6 +8,14 @@
         "cwd": ".",
         "timeoutSec": 10
       }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": ".github/scripts/session_end.sh",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
     ]
   }
 }
