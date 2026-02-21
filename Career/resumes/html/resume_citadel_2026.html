@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: letter;
+    margin: 0.55in 0.70in;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Georgia", serif;
+    font-size: 10.5pt;
+    color: #111;
+    line-height: 1.4;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 10pt;
+  }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: #1a1a2e;
+    margin-bottom: 4pt;
+  }
+  .header .contact {
+    font-size: 9.5pt;
+    color: #333;
+  }
+  .header .contact a {
+    color: #333;
+    text-decoration: none;
+  }
+  .header .contact span { margin: 0 6pt; }
+
+  /* Sections */
+  section {
+    margin-bottom: 9pt;
+  }
+  section h2 {
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1a1a2e;
+    border-bottom: 0.5pt solid #888;
+    padding-bottom: 2pt;
+    margin-bottom: 6pt;
+  }
+
+  /* Job entries */
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1pt;
+  }
+  .job-header .company {
+    font-weight: bold;
+    font-size: 10.5pt;
+  }
+  .job-header .dates {
+    font-style: italic;
+    font-size: 9.5pt;
+    color: #444;
+    white-space: nowrap;
+  }
+  .job-title {
+    font-style: italic;
+    font-size: 9.5pt;
+    color: #333;
+    margin-bottom: 3pt;
+  }
+
+  ul {
+    padding-left: 1.3em;
+    margin-bottom: 0;
+  }
+  ul li {
+    margin-bottom: 2pt;
+    font-size: 10pt;
+  }
+  ul li:last-child { margin-bottom: 0; }
+
+  .job-block { margin-bottom: 8pt; }
+  .job-block:last-child { margin-bottom: 0; }
+
+  /* Education */
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .edu-header .school { font-weight: bold; }
+  .edu-header .dates { font-style: italic; font-size: 9.5pt; color: #444; }
+  .edu-degree { font-size: 10pt; margin-bottom: 2pt; }
+  .edu-note { font-size: 10pt; color: #333; }
+
+  /* Skills table */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+  }
+  .skills-table td {
+    vertical-align: top;
+    padding: 2pt 4pt 2pt 0;
+  }
+  .skills-table td:first-child {
+    font-weight: bold;
+    width: 2.1in;
+    white-space: nowrap;
+    padding-right: 10pt;
+  }
+
+  strong { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Liam Wood</h1>
+  <div class="contact">
+    Austin, TX
+    <span>|</span>
+    <a href="tel:13057909093">(305) 790-9093</a>
+    <span>|</span>
+    <a href="mailto:general.lvwood@gmail.com">general.lvwood@gmail.com</a>
+  </div>
+</div>
+
+<!-- Experience -->
+<section>
+  <h2>Experience</h2>
+
+  <div class="job-block">
+    <div class="job-header">
+      <span class="company">Microsoft</span>
+      <span class="dates">July 2022 – Present</span>
+    </div>
+    <div class="job-title">Software Engineer II — Platform Infrastructure</div>
+    <ul>
+      <li>Own design and end-to-end reliability of distributed notification infrastructure processing <strong>6B+ events/month</strong> across OneDrive and SharePoint, spanning dozens of interdependent services deployed across Linux-hosted AKS clusters.</li>
+      <li>Architected <strong>KEDA-driven job scheduling and autoscaling</strong> system tied to real-time queue depth and traffic patterns, reducing tail latency and eliminating over-provisioning waste (<strong>$500k–$750k annual savings</strong>).</li>
+      <li>Led AKS migration and full <strong>deployment and configuration management</strong> re-architecture — redesigned infrastructure-as-code pipelines and cluster provisioning to support safe, repeatable deployments at scale.</li>
+      <li>Designed <strong>multi-region failover</strong> architecture using Azure FrontDoor and Traffic Manager; maintained <strong>99.99% availability</strong> under continuous global load with automated BCDR failover runbooks.</li>
+      <li>Owned <strong>CI/CD pipelines</strong> (Azure DevOps, Git) and progressive rollout tooling, improving release cadence from 6-week cycles to <strong>weekly deployments</strong> with integrated smoke and regression testing.</li>
+      <li>Built and maintained <strong>process state observability</strong> systems and incident dashboards; collaborated with SRE teams globally to define alerting thresholds, runbooks, and on-call escalation paths.</li>
+      <li>Collaborated with partner engineering teams worldwide to safely enable new customer-facing features through design, testing, and staged rollout.</li>
+      <li>Promoted <strong>twice in 3 years</strong> for technical leadership across reliability engineering, cost optimization, and deployment safety.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <div class="job-header">
+      <span class="company">Visa</span>
+      <span class="dates">October 2020 – July 2022</span>
+    </div>
+    <div class="job-title">Senior Software Engineer — Clearing &amp; Settlement Infrastructure</div>
+    <ul>
+      <li>Designed and implemented <strong>state-machine–driven settlement engine components</strong> in Python and C++, processing <strong>trillions in annual transaction volume</strong> across distributed financial infrastructure with strict correctness and consistency guarantees.</li>
+      <li>Engineered distributed systems requiring <strong>fault-tolerant, exactly-once processing</strong> under concurrent load; contributed to real-time transaction observability and analysis pipelines across clearing and settlement systems.</li>
+      <li>Built and maintained comprehensive <strong>unit and integration test suites</strong> for high-criticality financial infrastructure, ensuring correctness and coverage across concurrent transaction edge cases.</li>
+      <li>Operated within a strict <strong>Linux-based production environment</strong>; routinely diagnosed and resolved complex distributed system failures with direct financial impact.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <div class="job-header">
+      <span class="company">Digital Worlds Institute — University of Florida</span>
+      <span class="dates">August 2019 – February 2020</span>
+    </div>
+    <div class="job-title">Software Developer</div>
+    <ul>
+      <li>Sole developer for a browser-based AR/blockchain card game platform; built a <strong>Node.js backend</strong> with Redis pub/sub managing <strong>100+ concurrent WebSocket connections</strong> and real-time distributed game state synchronization.</li>
+      <li>Designed Vue.js frontend with native-like performance and integrated WebAR libraries, delivering a full-stack production system end-to-end.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Education -->
+<section>
+  <h2>Education</h2>
+  <div class="edu-header">
+    <span class="school">University of Florida</span>
+    <span class="dates">August 2018 – May 2022</span>
+  </div>
+  <div class="edu-degree">B.S. Computer Science</div>
+  <div class="edu-note">Vice President, GatorVR — led technical workshops and mentored students in VR/AR development and CS fundamentals.</div>
+</section>
+
+<!-- Skills -->
+<section>
+  <h2>Skills</h2>
+  <table class="skills-table">
+    <tr>
+      <td>Languages</td>
+      <td>C++, Python, C#/.NET, Node.js, JavaScript</td>
+    </tr>
+    <tr>
+      <td>Infrastructure</td>
+      <td>Linux (AKS / bare-metal), Kubernetes, KEDA, Azure FrontDoor, Azure DevOps, BCDR Planning</td>
+    </tr>
+    <tr>
+      <td>Distributed Systems</td>
+      <td>High-scale event processing, multi-region failover, fault-tolerant state machines, queue-based scheduling</td>
+    </tr>
+    <tr>
+      <td>SDLC &amp; Tooling</td>
+      <td>Git, Azure DevOps CI/CD, progressive rollout, integration &amp; regression testing, incident response</td>
+    </tr>
+    <tr>
+      <td>Observability</td>
+      <td>Process state monitoring, alerting design, SRE collaboration, on-call runbooks</td>
+    </tr>
+  </table>
+</section>
+
+</body>
+</html>

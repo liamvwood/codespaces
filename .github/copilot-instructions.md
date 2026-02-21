@@ -1,96 +1,32 @@
 # GitHub Copilot Instructions
 
 ## Repository Purpose
-This is **Liam Wood's** personal career repository. It contains resumes, job application
-tracking, and tooling for the 2026 job search.
+This is **Liam Wood's** personal career repository for the 2026 job search.
+
+## Agent Entry Point
+**Read `Career/README.md` first.** It is the single source of truth for directory
+structure, file paths, resume variant guide, cover letter templates, scraper usage,
+and candidate facts. This file intentionally stays brief.
 
 ## Owner Profile
-- **Name:** Liam Wood
-- **Location:** Austin, TX (open to relocation)
+- **Name:** Liam Wood | Austin, TX (open to relocation)
 - **Email:** general.lvwood@gmail.com | **Phone:** (305) 790-9093
 - **Current role:** Software Engineer II — Platform Infrastructure @ Microsoft (July 2022–Present)
 - **Target roles:** Senior Platform / Infrastructure Engineer
 - **Target companies:** Big Tech, Finance/HFT, high-growth startups
 
-## Repository Structure
+## Key Paths (quick reference)
 
-```
-Career/
-  Resumes/
-    latex/                    # LaTeX source for all resume variants
-      Resume_Citadel_2026.tex     # Citadel Securities (Finance/HFT)
-      Resume_BigTech_2026.tex     # Google, Meta, Apple, AWS, Stripe, Cloudflare
-      Resume_Finance_2026.tex     # Jane Street, Two Sigma, Jump, HRT — leads with Visa work
-      Resume_Startup_2026.tex     # Databricks, Anduril, Rippling, Figma — leads with ownership/velocity
-    html/                     # HTML versions (mirrors latex/)
-    references/               # Reference letters / contacts
-  jobs/
-    applications_2026.csv         # Application tracker — columns: Company, Track, Role, URL,
-                                  #   Status, Resume Variant, Cover Letter, Notes
-    CoverLetter_BigTech_2026.md   # Cover letter for Big Tech track (Google, Meta, AWS, Stripe…)
-    CoverLetter_Finance_2026.md   # Cover letter for Finance/HFT track (Jane Street, Two Sigma…)
-    CoverLetter_Startup_2026.md   # Cover letter for Startup track (Databricks, Anduril, Rippling…)
-  scripts/
-    scrape_jobs.py            # Playwright + BeautifulSoup job scraper (see below)
-```
+| What | Path |
+|---|---|
+| Full structure + usage guide | `Career/README.md` |
+| Resume source files (LaTeX) | `Career/resumes/latex/` |
+| Cover letter templates | `Career/cover_letters/` |
+| Application tracker (CSV) | `Career/applications/applications_2026.csv` |
+| Job scraper | `Career/scripts/scrape_jobs.py` |
 
-## Resume Variants — When to Use Which
+## Naming Conventions
+- All filenames: `snake_case` (e.g. `resume_bigtech_2026.tex`, `cover_letter_finance_2026.md`)
+- Track values in CSV: `BigTech`, `Finance`, `Startup`
+- Status lifecycle: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
 
-| File | Emphasis | Best For |
-|------|----------|----------|
-| `Resume_BigTech_2026.tex` | Scale (6B events/month), AKS/K8s, CI/CD, observability | Google, Meta, AWS, Stripe, Cloudflare |
-| `Resume_Finance_2026.tex` | Fault-tolerant state machines, Visa settlement engine (trillions in txn volume), correctness | Jane Street, Two Sigma, Jump, HRT, Citadel |
-| `Resume_Startup_2026.tex` | Full ownership, shipping velocity (6-week→weekly), $500k–$750k cost savings | Databricks, Anduril, Rippling, Figma |
-| `Resume_Citadel_2026.tex` | Citadel-specific (original) | Citadel Securities only |
-
-## Job Scraper (`Career/scripts/scrape_jobs.py`)
-
-Re-run at any time to find new roles and append them to `applications_2026.csv`:
-
-```bash
-python Career/scripts/scrape_jobs.py
-```
-
-- Uses **Playwright** (headless Chromium) + **BeautifulSoup** (lxml)
-- Deduplicates against existing CSV rows
-- Automatically assigns the correct `Resume Variant` per company track
-- Requirements: `pip install playwright beautifulsoup4 lxml && python -m playwright install chromium`
-- System deps (if Chromium fails to launch):
-  `sudo apt-get install -y libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64`
-
-## Application Tracker (`Career/jobs/applications_2026.csv`)
-
-CSV columns: `Company, Track, Role, URL, Status, Resume Variant, Cover Letter, Notes`
-
-Status values: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
-
-## Cover Letters
-
-Pre-written templates live in `Career/jobs/`. Personalize `[Company]` / `[Hiring Manager Name]`
-before sending.
-
-| File | Track | Opening angle |
-|------|-------|---------------|
-| `CoverLetter_BigTech_2026.md` | BigTech | 6B events/month scale, KEDA savings, CI/CD velocity |
-| `CoverLetter_Finance_2026.md` | Finance | Visa settlement engine, exactly-once correctness, financial impact |
-| `CoverLetter_Startup_2026.md` | Startup | End-to-end ownership, shipping velocity, cost savings |
-
-When writing a new or customized cover letter, use these track-specific angles:
-
-- **BigTech:** Lead with 6B+ events/month scale, KEDA autoscaling savings ($500k–$750k),
-  AKS, multi-region failover, CI/CD velocity (6-week → weekly).
-- **Finance/HFT:** Lead with Visa settlement engine (trillions in annual txn volume),
-  fault-tolerant exactly-once state machines, Linux production ops under financial pressure.
-- **Startup:** Lead with end-to-end ownership, shipping velocity, measurable cost savings,
-  and full-stack breadth (Node.js, Vue.js, C++, Python).
-
-## Key Resume Facts (for tailoring applications)
-
-- 6B+ events/month — distributed notification infra (OneDrive / SharePoint)
-- KEDA autoscaling → $500k–$750k/year in cost savings
-- AKS migration + infra-as-code re-architecture
-- Multi-region failover (Azure FrontDoor + Traffic Manager) — 99.99% availability
-- CI/CD: 6-week cycles → weekly deployments with automated rollback
-- Visa: state-machine settlement engine, trillions in annual txn volume, exactly-once processing
-- B.S. Computer Science, University of Florida (2022)
-- Languages: C++, Python, C#/.NET, Node.js, JavaScript

@@ -8,19 +8,41 @@ Usage:
 Output:
     Career/jobs/applications_2026.csv  (appends new roles, skips duplicates)
 
+Sources:
+    - Direct company career pages (TARGETS list)
+    - Jane Street JSON API  (janestreet.com/jobs/main.json)
+    - Anthropic Greenhouse API
+    - BuiltInAustin search (builtinaustin.com, 3 pages)
+
 Requirements:
     pip install playwright beautifulsoup4 lxml
     python -m playwright install chromium
-    python -m playwright install-deps chromium  # or: sudo apt-get install libatk1.0-0 ...
+    # If Chromium fails to launch:
+    sudo apt-get install -y libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
+        libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64
 """
 
-import asyncio, csv, os
+import asyncio, csv, json, os, urllib.request
 from pathlib import Path
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
-# ── Target career pages ────────────────────────────────────────────────────────
+# ── Company → Track classification ────────────────────────────────────────────
+BIGTECH_KEYWORDS = {"google","meta","apple","amazon","aws","microsoft","stripe",
+                    "cloudflare","netflix","linkedin","salesforce","adobe","oracle"}
+FINANCE_KEYWORDS = {"citadel","jane street","two sigma","jump trading","hrt",
+                    "hudson river","blackrock","bloomberg","goldman","jpmorgan",
+                    "morgan stanley","virtu","optiver","akuna","imc","de shaw",
+                    "renaissance","point72"}
+
+def classify(company: str) -> str:
+    c = company.lower()
+    if any(k in c for k in BIGTECH_KEYWORDS): return "BigTech"
+    if any(k in c for k in FINANCE_KEYWORDS): return "Finance"
+    return "Startup"
+
+# ── Target career pages (generic Playwright scraper) ──────────────────────────
 # Add or remove entries as needed: (Company, Track, URL)
 TARGETS = [
     # Big Tech
@@ -30,22 +52,20 @@ TARGETS = [
     ("Cloudflare",  "BigTech",  "https://www.cloudflare.com/careers/jobs/?department=Engineering"),
     ("AWS",         "BigTech",  "https://www.amazon.jobs/en/search?base_query=infrastructure+engineer&job_type=Full-Time"),
     # Finance / HFT
-    ("Jane Street", "Finance",  "https://www.janestreet.com/join-jane-street/open-roles/"),
-    ("Two Sigma",   "Finance",  "https://careers.twosigma.com/careers/SearchJobs/?485_484_484_parent_Department_TargetID=17866&listFilterMode=1"),
     ("Citadel",     "Finance",  "https://www.citadel.com/careers/open-opportunities/students/engineering/"),
     ("Jump Trading","Finance",  "https://www.jumptrading.com/careers/?"),
     # Startups
     ("Databricks",  "Startup",  "https://www.databricks.com/company/careers/open-positions?department=Engineering%20-%20Infrastructure"),
-    ("Anduril",     "Startup",  "https://job-boards.greenhouse.io/andurilindustries"),
     ("Rippling",    "Startup",  "https://www.rippling.com/careers#open-positions"),
     ("Figma",       "Startup",  "https://www.figma.com/careers/#job-openings"),
 ]
 
-# Keywords to match against job title text
+# ── Keywords to match against job title text ──────────────────────────────────
 KEYWORDS = [
     "infrastructure", "platform", "systems engineer", "reliability",
     "sre", "site reliability", "kubernetes", "devops", "distributed",
-    "backend infrastructure", "production engineer",
+    "backend infrastructure", "production engineer", "compute", "accelerator",
+    "sandboxing", "data infra", "ml infra", "agent infra",
 ]
 
 RESUME_MAP = {
@@ -54,7 +74,7 @@ RESUME_MAP = {
     "Startup":  "Resume_Startup_2026",
 }
 
-OUT_CSV = Path(__file__).parent.parent / "jobs" / "applications_2026.csv"
+OUT_CSV = Path(__file__).parent.parent / "applications" / "applications_2026.csv"
 FIELDS = ["Company", "Track", "Role", "URL", "Status", "Resume Variant", "Cover Letter", "Notes"]
 
 
@@ -106,28 +126,135 @@ async def scrape_page(page, company: str, track: str, url: str) -> list[dict]:
     return results
 
 
+def _make_row(company: str, role: str, url: str, track: str = None) -> dict:
+    track = track or classify(company)
+    return {"Company": company, "Track": track, "Role": role, "URL": url,
+            "Status": "To Apply", "Resume Variant": RESUME_MAP.get(track, ""),
+            "Cover Letter": "", "Notes": ""}
+
+
+def scrape_jane_street() -> list[dict]:
+    """Fetch Jane Street roles from their public JSON API."""
+    rows = []
+    try:
+        with urllib.request.urlopen("https://www.janestreet.com/jobs/main.json", timeout=10) as r:
+            jobs = json.loads(r.read())
+        for j in jobs:
+            title = j.get("position", "")
+            if any(kw in title.lower() for kw in KEYWORDS):
+                url = f"https://www.janestreet.com/join-jane-street/open-roles/?id={j['id']}"
+                rows.append(_make_row("Jane Street", title, url, "Finance"))
+    except Exception as e:
+        print(f"  [Jane Street API] error: {e}")
+    return rows
+
+
+def scrape_greenhouse(company: str, board_slug: str, track: str) -> list[dict]:
+    """Fetch roles from any Greenhouse job board API."""
+    rows = []
+    try:
+        url = f"https://boards-api.greenhouse.io/v1/boards/{board_slug}/jobs?content=true"
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+        for j in data.get("jobs", []):
+            title = j.get("title", "")
+            if any(kw in title.lower() for kw in KEYWORDS):
+                rows.append(_make_row(company, title, j.get("absolute_url", ""), track))
+    except Exception as e:
+        print(f"  [{company} Greenhouse] error: {e}")
+    return rows
+
+
+async def scrape_builtinaustin(browser, ua: str) -> list[dict]:
+    """Scrape BuiltInAustin DevOps/infra search across all pages."""
+    rows = []
+    seen = set()
+    base = "https://www.builtinaustin.com/jobs?search=Senior+DevOps+Engineer"
+    for pg in range(1, 4):
+        url = f"{base}&page={pg}" if pg > 1 else base
+        page = await browser.new_page(user_agent=ua)
+        try:
+            await page.goto(url, timeout=30000, wait_until="networkidle")
+            await page.wait_for_timeout(3000)
+            soup = BeautifulSoup(await page.content(), "lxml")
+            cards = soup.find_all("div", attrs={"data-id": "job-card"})
+            print(f"  BuiltInAustin page {pg}: {len(cards)} cards")
+            for card in cards:
+                co_tag = card.find("a", attrs={"data-id": "company-title"}) or \
+                         card.find("a", href=lambda h: h and h.startswith("/company/"))
+                company = co_tag.get_text(strip=True) if co_tag else "Unknown"
+                title_tag = card.find("a", attrs={"data-id": "job-card-title"}) or card.find("h2")
+                if not title_tag: continue
+                title = title_tag.get_text(strip=True)
+                href  = title_tag.get("href", "")
+                if href and not href.startswith("http"):
+                    href = "https://www.builtinaustin.com" + href
+                key = (company, title)
+                if key not in seen:
+                    seen.add(key)
+                    rows.append(_make_row(company, title, href))
+        except Exception as e:
+            print(f"  [BuiltInAustin pg{pg}] error: {e}")
+        finally:
+            await page.close()
+    return rows
+
+
 async def main():
     # Load existing roles to avoid duplicates
     existing = set()
     if OUT_CSV.exists():
         with open(OUT_CSV, newline="") as f:
             for row in csv.DictReader(f):
-                existing.add((row["Company"], row["Role"]))
+                existing.add((row["Company"].strip(), row["Role"].strip()))
 
     all_new = []
+    ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page(user_agent=(
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        ))
+
+        # Generic career page scraper
+        page = await browser.new_page(user_agent=ua)
         for company, track, url in TARGETS:
             print(f"Scraping {company} ({track})...")
             jobs = await scrape_page(page, company, track, url)
             new_jobs = [j for j in jobs if (j["Company"], j["Role"]) not in existing]
             print(f"  → {len(jobs)} matched, {len(new_jobs)} new")
             all_new.extend(new_jobs)
+            existing.update((j["Company"], j["Role"]) for j in new_jobs)
+        await page.close()
+
+        # BuiltInAustin (paginated, card-based)
+        print("Scraping BuiltInAustin...")
+        bia_jobs = await scrape_builtinaustin(browser, ua)
+        new_bia = [j for j in bia_jobs if (j["Company"], j["Role"]) not in existing]
+        print(f"  → {len(bia_jobs)} total, {len(new_bia)} new")
+        all_new.extend(new_bia)
+        existing.update((j["Company"], j["Role"]) for j in new_bia)
+
         await browser.close()
+
+    # JSON API sources (no browser needed)
+    print("Scraping Jane Street (API)...")
+    js_jobs = scrape_jane_street()
+    new_js = [j for j in js_jobs if (j["Company"], j["Role"]) not in existing]
+    print(f"  → {len(js_jobs)} matched, {len(new_js)} new")
+    all_new.extend(new_js)
+    existing.update((j["Company"], j["Role"]) for j in new_js)
+
+    print("Scraping Anthropic (Greenhouse API)...")
+    anth_jobs = scrape_greenhouse("Anthropic", "anthropic", "Startup")
+    new_anth = [j for j in anth_jobs if (j["Company"], j["Role"]) not in existing]
+    print(f"  → {len(anth_jobs)} matched, {len(new_anth)} new")
+    all_new.extend(new_anth)
+    existing.update((j["Company"], j["Role"]) for j in new_anth)
+
+    print("Scraping Anduril (Greenhouse API)...")
+    and_jobs = scrape_greenhouse("Anduril", "andurilindustries", "Startup")
+    new_and = [j for j in and_jobs if (j["Company"], j["Role"]) not in existing]
+    print(f"  → {len(and_jobs)} matched, {len(new_and)} new")
+    all_new.extend(new_and)
 
     # Write / append CSV
     write_header = not OUT_CSV.exists() or os.path.getsize(OUT_CSV) == 0
