@@ -42,10 +42,15 @@ Always replace `[Hiring Manager Name]` before use.
 - Status lifecycle: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `Offer` / `Rejected`
 - Notes: `Tier 1` = apply immediately (company-specific cover letter ready); `Tier 2` = apply this week
 
-## Scraper
-Re-run at any time to append new roles (deduplicates automatically):
-```bash
-python Career/scripts/scrape_jobs.py
-```
-Sources: Greenhouse API, Ongig API, HRT admin-ajax, Jane Street JSON API, BuiltInAustin, generic Playwright.
-Location filter: NYC, Austin, Miami, Remote.
+## Token Economy
+- **Read `Career/README.md` first** — it is the authoritative source; don't re-ask what the agent can read.
+- Use the `explore` agent for any lookup question ("which companies have cover letters?", "what's in this resume?").
+- Never load the full `applications_2026.csv` into the main context; use the `application-tracker` agent.
+- Prefer the `task` agent to run the scraper or compile LaTeX — keeps verbose output out of main context.
+
+## Testing & Validation
+- **LaTeX resumes:** Before editing any `.tex` file, confirm it compiles (`compile-resume` skill). After editing, compile again. A broken compile is a blocker — revert before proceeding.
+- **Tracker CSV:** Before writing to `applications_2026.csv`, verify column count matches the schema:
+  `Company, Track, Role, URL, Status, Resume Variant, Cover Letter, Notes, Location` (9 columns).
+  Valid `Status` values: `To Apply`, `Applied`, `Phone Screen`, `Interview`, `Offer`, `Rejected`.
+- **Cover letters:** Always confirm `[Hiring Manager Name]` has been replaced before marking a letter as ready.
