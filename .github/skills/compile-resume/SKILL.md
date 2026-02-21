@@ -16,20 +16,31 @@ Call this skill with the resume variant name, for example:
 - `compile-resume resume_finance_2026`
 - `compile-resume Career/resumes/latex/resume_startup_2026.tex`
 
+## Directory Layout
+- Source:        `Career/resumes/latex/*.tex`
+- PDF output:    `Career/resumes/pdf/`
+- Build artifacts: `Career/resumes/obj/` (gitignored — never committed)
+
 ## Steps
 1. Resolve the full path to the `.tex` file:
    - If given a bare name like `resume_bigtech_2026`, expand to `Career/resumes/latex/resume_bigtech_2026.tex`
    - If given a relative path, treat as relative to the repo root
-2. Change to the file's directory (pdflatex writes output files alongside the source)
-3. Run: `pdflatex -interaction=nonstopmode <filename>.tex`
+2. Ensure `Career/resumes/obj/` exists: `mkdir -p Career/resumes/obj`
+3. Run pdflatex with obj as the aux directory and pdf as the output destination:
+   ```
+   pdflatex -interaction=nonstopmode \
+     -output-directory=Career/resumes/obj \
+     Career/resumes/latex/<filename>.tex
+   mv Career/resumes/obj/<filename>.pdf Career/resumes/pdf/
+   ```
 4. Check the exit code:
-   - **Exit 0:** Report "✅ Compiled successfully → <filename>.pdf"
-   - **Non-zero:** Extract error lines from the `.log` file (lines starting with `!`) and report them clearly
-5. Clean up auxiliary files (`.aux`, `.log`) after a successful compile
+   - **Exit 0:** Report "✅ Compiled successfully → Career/resumes/pdf/<filename>.pdf"
+   - **Non-zero:** Extract error lines from `Career/resumes/obj/<filename>.log` (lines starting with `!`) and report them clearly
+5. Leave obj/ contents in place (gitignored); do NOT delete them (useful for debugging)
 
 ## Output Format
 ```
-✅ resume_bigtech_2026.pdf compiled successfully.
+✅ resume_bigtech_2026.pdf compiled successfully → Career/resumes/pdf/resume_bigtech_2026.pdf
 ```
 or
 ```
