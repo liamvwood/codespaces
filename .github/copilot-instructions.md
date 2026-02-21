@@ -25,8 +25,11 @@ Career/
     html/                     # HTML versions (mirrors latex/)
     references/               # Reference letters / contacts
   jobs/
-    applications_2026.csv     # Application tracker — columns: Company, Track, Role, URL,
-                              #   Status, Resume Variant, Cover Letter, Notes
+    applications_2026.csv         # Application tracker — columns: Company, Track, Role, URL,
+                                  #   Status, Resume Variant, Cover Letter, Notes
+    CoverLetter_BigTech_2026.md   # Cover letter for Big Tech track (Google, Meta, AWS, Stripe…)
+    CoverLetter_Finance_2026.md   # Cover letter for Finance/HFT track (Jane Street, Two Sigma…)
+    CoverLetter_Startup_2026.md   # Cover letter for Startup track (Databricks, Anduril, Rippling…)
   scripts/
     scrape_jobs.py            # Playwright + BeautifulSoup job scraper (see below)
 ```
@@ -63,7 +66,16 @@ Status values: `To Apply` → `Applied` → `Phone Screen` → `Interview` → `
 
 ## Cover Letters
 
-When drafting cover letters for Liam, use these track-specific angles:
+Pre-written templates live in `Career/jobs/`. Personalize `[Company]` / `[Hiring Manager Name]`
+before sending.
+
+| File | Track | Opening angle |
+|------|-------|---------------|
+| `CoverLetter_BigTech_2026.md` | BigTech | 6B events/month scale, KEDA savings, CI/CD velocity |
+| `CoverLetter_Finance_2026.md` | Finance | Visa settlement engine, exactly-once correctness, financial impact |
+| `CoverLetter_Startup_2026.md` | Startup | End-to-end ownership, shipping velocity, cost savings |
+
+When writing a new or customized cover letter, use these track-specific angles:
 
 - **BigTech:** Lead with 6B+ events/month scale, KEDA autoscaling savings ($500k–$750k),
   AKS, multi-region failover, CI/CD velocity (6-week → weekly).
