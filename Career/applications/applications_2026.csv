@@ -1,17 +1,17 @@
 Company,Track,Role,URL,Status,Resume Variant,Cover Letter,Notes,Location
 Google,BigTech,"Cloud Infrastructure Engineer, HPC, TPU, Public Sector",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Data Infrastructure Engineer, Google Customer Solutions",,To Apply,Resume_BigTech_2026,,,
-Google,BigTech,"Cloud Platforms and Infrastructure Engineer, TPU/GPU, Google Cloud",,To Apply,Resume_BigTech_2026,,,
+Google,BigTech,"Cloud Platforms and Infrastructure Engineer, TPU/GPU, Google Cloud",,To Apply,Resume_BigTech_2026,cover_letter_google_2026.md,Tier 1,
 Google,BigTech,"Cloud Platforms and Infrastructure Engineer, Google Cloud",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"SoC Test Automation and Infrastructure Engineer, Platforms",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Cloud Engineer, Infrastructure, Professional Services, Google Cloud (English, Portuguese or Spanish)",,To Apply,Resume_BigTech_2026,,,
-Google,BigTech,"Staff Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
-Google,BigTech,"Senior Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
-Google,BigTech,"Senior Software Engineer, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
+Google,BigTech,"Staff Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,cover_letter_google_2026.md,Tier 1,
+Google,BigTech,"Senior Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,cover_letter_google_2026.md,Tier 1,
+Google,BigTech,"Senior Software Engineer, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,cover_letter_google_2026.md,Tier 1,
 Google,BigTech,"Software Engineer III, Performance, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Staff Software Engineer, AI Infrastructure, Applied AI",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Software Engineer III, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
-Google,BigTech,"Senior Staff Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
+Google,BigTech,"Senior Staff Software Engineer, Infrastructure, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,cover_letter_google_2026.md,Tier 1,
 Google,BigTech,"Senior Software Engineer, Embedded Systems/Firmware, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Senior Software Engineer, Performance, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
 Google,BigTech,"Software Engineer III, Embedded Systems/Firmware, Platforms Infrastructure Engineering",,To Apply,Resume_BigTech_2026,,,
@@ -19,23 +19,23 @@ Google,BigTech,"Software Engineer, Infrastructure",,To Apply,Resume_BigTech_2026
 Meta,BigTech,Infrastructure Security Monitoring Engineer,https://www.metacareers.com/profile/job_details/25110589451915460,To Apply,Resume_BigTech_2026,,,
 Meta,BigTech,"Network Engineer, Foundation and Support (Edge/Backbone Infrastructure Design)",https://www.metacareers.com/profile/job_details/4055679534697858,To Apply,Resume_BigTech_2026,,,
 Meta,BigTech,"Network Production Engineer, Infrastructure",https://www.metacareers.com/profile/job_details/9793139210805688,To Apply,Resume_BigTech_2026,,,
-Meta,BigTech,"Production Network Engineer, Infrastructure Automation and Tooling, Fullstack",https://www.metacareers.com/profile/job_details/1281796970661817,To Apply,Resume_BigTech_2026,,,
+Meta,BigTech,"Production Network Engineer, Infrastructure Automation and Tooling, Fullstack",https://www.metacareers.com/profile/job_details/1281796970661817,To Apply,Resume_BigTech_2026,cover_letter_meta_2026.md,Tier 1,
 Meta,BigTech,Controls Engineer - Data Center Infrastructure Design & Engineering,https://www.metacareers.com/profile/job_details/1642713117097854,To Apply,Resume_BigTech_2026,,,
 Meta,BigTech,"Network Production Engineer, Network Infrastructure",https://www.metacareers.com/profile/job_details/1290011782714129,To Apply,Resume_BigTech_2026,,,
 Meta,BigTech,"Fullstack Engineer, Infrastructure",https://www.metacareers.com/profile/job_details/1611437296690143,To Apply,Resume_BigTech_2026,,,
 Meta,BigTech,Enterprise Infrastructure Engineer,https://www.metacareers.com/profile/job_details/1514920796269670,To Apply,Resume_BigTech_2026,,,
-Meta,BigTech,Software Engineer (Leadership) - Infrastructure,https://www.metacareers.com/profile/job_details/704019139159184,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms  (German-speaking)",https://stripe.com/jobs/listing/account-executive-platforms-german-speaking/7458835,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms - Strategics",https://stripe.com/jobs/listing/account-executive-platforms-strategics/7604080,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms (Existing Business)",https://stripe.com/jobs/listing/account-executive-platforms-existing-business/7576967,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms (French Speaking)",https://stripe.com/jobs/listing/account-executive-platforms-french-speaking/7353623,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms (Grower)",https://stripe.com/jobs/listing/account-executive-platforms-grower/7577015,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Platforms (New Business)",https://stripe.com/jobs/listing/account-executive-platforms-new-business/7218796,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Startup Platforms (Existing Business)",https://stripe.com/jobs/listing/account-executive-startup-platforms-existing-business/7339700,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,"Account Executive, Startup SaaS Platforms - Existing Business",https://stripe.com/jobs/listing/account-executive-startup-saas-platforms-existing-business/7451383,To Apply,Resume_BigTech_2026,,,
-Stripe,BigTech,Platforms,https://stripe.com/use-cases/platforms,To Apply,Resume_BigTech_2026,,,
+Meta,BigTech,Software Engineer (Leadership) - Infrastructure,https://www.metacareers.com/profile/job_details/704019139159184,To Apply,Resume_BigTech_2026,cover_letter_meta_2026.md,Tier 1,
+Stripe,BigTech,"Account Executive, Platforms  (German-speaking)",https://stripe.com/jobs/listing/account-executive-platforms-german-speaking/7458835,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Platforms - Strategics",https://stripe.com/jobs/listing/account-executive-platforms-strategics/7604080,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Platforms (Existing Business)",https://stripe.com/jobs/listing/account-executive-platforms-existing-business/7576967,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Platforms (French Speaking)",https://stripe.com/jobs/listing/account-executive-platforms-french-speaking/7353623,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Platforms (Grower)",https://stripe.com/jobs/listing/account-executive-platforms-grower/7577015,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Platforms (New Business)",https://stripe.com/jobs/listing/account-executive-platforms-new-business/7218796,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Startup Platforms (Existing Business)",https://stripe.com/jobs/listing/account-executive-startup-platforms-existing-business/7339700,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,"Account Executive, Startup SaaS Platforms - Existing Business",https://stripe.com/jobs/listing/account-executive-startup-saas-platforms-existing-business/7451383,To Apply,Resume_BigTech_2026,,Tier 2,
+Stripe,BigTech,Platforms,https://stripe.com/use-cases/platforms,To Apply,Resume_BigTech_2026,,Tier 2,
 Cloudflare,BigTech,Database Reliability Engineer,https://boards.greenhouse.io/cloudflare/jobs/7249558?gh_jid=7249558,To Apply,Resume_BigTech_2026,,,
-Cloudflare,BigTech,"Distributed Systems Engineer, Analytical Database Platform",https://boards.greenhouse.io/cloudflare/jobs/7462801?gh_jid=7462801,To Apply,Resume_BigTech_2026,,,
+Cloudflare,BigTech,"Distributed Systems Engineer, Analytical Database Platform",https://boards.greenhouse.io/cloudflare/jobs/7462801?gh_jid=7462801,To Apply,Resume_BigTech_2026,cover_letter_cloudflare_2026.md,Tier 1,
 Cloudflare,BigTech,"Frontend Engineer, Media Platform",https://boards.greenhouse.io/cloudflare/jobs/7304810?gh_jid=7304810,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,"Frontend Engineer, UI Platform",https://boards.greenhouse.io/cloudflare/jobs/7559379?gh_jid=7559379,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,Hardware Systems Engineer,https://boards.greenhouse.io/cloudflare/jobs/7082275?gh_jid=7082275,To Apply,Resume_BigTech_2026,,,
@@ -62,7 +62,7 @@ Cloudflare,BigTech,Software Engineer - Security Platform,https://boards.greenhou
 Cloudflare,BigTech,Software Engineer – Distributed Systems (Unimog L4 Load Balancer),https://boards.greenhouse.io/cloudflare/jobs/7294535?gh_jid=7294535,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,"Software Engineer, Network Performance & Reliability",https://boards.greenhouse.io/cloudflare/jobs/7446310?gh_jid=7446310,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,"Software Engineer, Service Automation (Kubernetes)",https://boards.greenhouse.io/cloudflare/jobs/7066923?gh_jid=7066923,To Apply,Resume_BigTech_2026,,,
-Cloudflare,BigTech,Software Engineer: Distributed Systems (Infrastructure),https://boards.greenhouse.io/cloudflare/jobs/7088208?gh_jid=7088208,To Apply,Resume_BigTech_2026,,,
+Cloudflare,BigTech,Software Engineer: Distributed Systems (Infrastructure),https://boards.greenhouse.io/cloudflare/jobs/7088208?gh_jid=7088208,To Apply,Resume_BigTech_2026,cover_letter_cloudflare_2026.md,Tier 1,
 Cloudflare,BigTech,"Solutions Architect, AI/Cloudflare Developer Platform",https://boards.greenhouse.io/cloudflare/jobs/7505582?gh_jid=7505582,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,Systems Engineer,https://boards.greenhouse.io/cloudflare/jobs/7343780?gh_jid=7343780,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,Systems Engineer - Browser Isolation,https://boards.greenhouse.io/cloudflare/jobs/7346457?gh_jid=7346457,To Apply,Resume_BigTech_2026,,,
@@ -84,19 +84,19 @@ AWS,BigTech,"Data Center Infrastructure Engineer , HKG - Infra Delivery Techs",h
 AWS,BigTech,"Data Center Infrastructure Engineer , Data Center Operations, HKG - DCO",https://www.amazon.jobs/en/jobs/3122805/data-center-infrastructure-engineer-data-center-operations-hkg-dco,To Apply,Resume_BigTech_2026,,,
 Citadel,Finance,Site Reliability Engineering,https://www.citadel.com/careers/engineering/site-reliability-engineering/,To Apply,Resume_Finance_2026,,,
 Jump Trading,Finance,campusrecruiting@jumptrading.com,mailto:campusrecruiting@jumptrading.com,To Apply,Resume_Finance_2026,,,
-Databricks,Startup,"Platform OverviewA unified platform for data, analytics and AI",https://www.databricks.com/product/data-intelligence-platform,To Apply,Resume_Startup_2026,,,
-Databricks,Startup,"Data ManagementData reliability, security and performance",https://www.databricks.com/product/delta-lake-on-databricks,To Apply,Resume_Startup_2026,,,
-Databricks,Startup,Open Source TechnologiesLearn more about the innovations behind the platform,https://www.databricks.com/product/open-source,To Apply,Resume_Startup_2026,,,
-Databricks,Startup,Databricks AcademySign in to the Databricks learning platform,https://www.databricks.com/learn/training/login,To Apply,Resume_Startup_2026,,,
-Databricks,Startup,Platform Overview,https://www.databricks.com/product/data-intelligence-platform,To Apply,Resume_Startup_2026,,,
-Rippling,Startup,Platform,,To Apply,Resume_Startup_2026,,,
-Figma,Startup,Customer storiesRead about leading product teams,https://www.figma.com/customers/,To Apply,Resume_Startup_2026,,,
-Figma,Startup,"Director, Software Engineering - Product Platform",https://boards.greenhouse.io/figma/jobs/5600388004?gh_jid=5600388004,To Apply,Resume_Startup_2026,,,
-Figma,Startup,"Software Engineer, AI Platforms",https://boards.greenhouse.io/figma/jobs/5691886004?gh_jid=5691886004,To Apply,Resume_Startup_2026,,,
-Figma,Startup,"Software Engineer, Distributed Systems",https://boards.greenhouse.io/figma/jobs/5552549004?gh_jid=5552549004,To Apply,Resume_Startup_2026,,,
+Databricks,Startup,"Platform OverviewA unified platform for data, analytics and AI",https://www.databricks.com/product/data-intelligence-platform,To Apply,Resume_Startup_2026,,Tier 2,
+Databricks,Startup,"Data ManagementData reliability, security and performance",https://www.databricks.com/product/delta-lake-on-databricks,To Apply,Resume_Startup_2026,,Tier 2,
+Databricks,Startup,Open Source TechnologiesLearn more about the innovations behind the platform,https://www.databricks.com/product/open-source,To Apply,Resume_Startup_2026,,Tier 2,
+Databricks,Startup,Databricks AcademySign in to the Databricks learning platform,https://www.databricks.com/learn/training/login,To Apply,Resume_Startup_2026,,Tier 2,
+Databricks,Startup,Platform Overview,https://www.databricks.com/product/data-intelligence-platform,To Apply,Resume_Startup_2026,,Tier 2,
+Rippling,Startup,Platform,,To Apply,Resume_Startup_2026,,Tier 2,
+Figma,Startup,Customer storiesRead about leading product teams,https://www.figma.com/customers/,To Apply,Resume_Startup_2026,,Tier 2,
+Figma,Startup,"Director, Software Engineering - Product Platform",https://boards.greenhouse.io/figma/jobs/5600388004?gh_jid=5600388004,To Apply,Resume_Startup_2026,,Tier 2,
+Figma,Startup,"Software Engineer, AI Platforms",https://boards.greenhouse.io/figma/jobs/5691886004?gh_jid=5691886004,To Apply,Resume_Startup_2026,,Tier 2,
+Figma,Startup,"Software Engineer, Distributed Systems",https://boards.greenhouse.io/figma/jobs/5552549004?gh_jid=5552549004,To Apply,Resume_Startup_2026,,Tier 2,
 Figma,Startup,"Software Engineer, Production Engineering",https://boards.greenhouse.io/figma/jobs/5551649004?gh_jid=5551649004,To Apply,Resume_Startup_2026,,,
 Figma,Startup,"Software Engineer, Production Engineering  (London, United Kingdom)",https://boards.greenhouse.io/figma/jobs/5781928004?gh_jid=5781928004,To Apply,Resume_Startup_2026,,,
-Figma,Startup,"Software Engineer, Web Platform",https://boards.greenhouse.io/figma/jobs/5759501004?gh_jid=5759501004,To Apply,Resume_Startup_2026,,,
+Figma,Startup,"Software Engineer, Web Platform",https://boards.greenhouse.io/figma/jobs/5759501004?gh_jid=5759501004,To Apply,Resume_Startup_2026,,Tier 2,
 Corporate Tools LLC,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-devops-engineer/7166778,To Apply,Resume_Startup_2026,,,
 Corporate Tools LLC,Startup,Senior DevOps Engineer - On-Prem Infrastructure,https://www.builtinaustin.com/job/senior-devops-engineer-prem-infrastructure/7166762,To Apply,Resume_Startup_2026,,,
 Striveworks,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-devops-engineer/6321162,To Apply,Resume_Startup_2026,,,
@@ -123,7 +123,7 @@ Yassir,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-d
 SmithRx,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-devops-engineer/7914576,To Apply,Resume_Startup_2026,,,
 Liatrio,Startup,Senior DevOps Engineer/ Consultant,https://www.builtinaustin.com/job/senior-devops-engineer-consultant/4361204,To Apply,Resume_Startup_2026,,,
 Entefy,Startup,Sr. DevOps Engineer (Remote Position),https://www.builtinaustin.com/job/sr-devops-engineer-remote-position/2321413,To Apply,Resume_Startup_2026,,,
-PayPal,Startup,Sr Staff Software Engineer - Cloud Infrastructure and DevOps,https://www.builtinaustin.com/job/sr-staff-software-engineer-cloud-infrastructure-and-devops/8417240,To Apply,Resume_Startup_2026,,,
+PayPal,Startup,Sr Staff Software Engineer - Cloud Infrastructure and DevOps,https://www.builtinaustin.com/job/sr-staff-software-engineer-cloud-infrastructure-and-devops/8417240,To Apply,Resume_Startup_2026,cover_letter_startup_2026.md,Tier 1,
 PayPal,Startup,Sr Software Engineer - Cloud Infrastructure and Devops,https://www.builtinaustin.com/job/sr-software-engineer/8220582,To Apply,Resume_Startup_2026,,,
 CACI International Inc,Startup,Senior DevOps CM Engineer,https://www.builtinaustin.com/job/senior-devops-cm-engineer/8473191,To Apply,Resume_Startup_2026,,,
 PayPal,Startup,"Senior Cloud Engineer, Infra & DevOps",https://www.builtinaustin.com/job/senior-cloud-engineer-infra-devops/8269663,To Apply,Resume_Startup_2026,,,
@@ -138,7 +138,7 @@ Tenna,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-de
 Polly (polly.co),Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-devops-engineer/7407684,To Apply,Resume_Startup_2026,,,
 Five9,Startup,Senior DevOps Engineer,https://www.builtinaustin.com/job/senior-devops-engineer/6979046,To Apply,Resume_Startup_2026,,,
 Natera,Startup,Senior Software Engineer/DevOps,https://www.builtinaustin.com/job/senior-software-engineer-devops/8219101,To Apply,Resume_Startup_2026,,,
-Eloquent AI,Startup,"Senior Software Engineer, DevOps & Infrastructure",https://www.builtinaustin.com/job/senior-software-engineer-devops-infrastructure/7581639,To Apply,Resume_Startup_2026,,,
+Eloquent AI,Startup,"Senior Software Engineer, DevOps & Infrastructure",https://www.builtinaustin.com/job/senior-software-engineer-devops-infrastructure/7581639,To Apply,Resume_Startup_2026,cover_letter_startup_2026.md,Tier 1,
 Guidebook Inc.,Startup,Senior Backend Engineer (DevOps),https://www.builtinaustin.com/job/senior-backend-engineer-devops/8252177,To Apply,Resume_Startup_2026,,,
 Netflix,BigTech,Senior Systems Engineer - DevOps (Active Directory),https://www.builtinaustin.com/job/senior-systems-engineer-devops-active-directory/6694423,To Apply,Resume_BigTech_2026,,,
 Equip,Startup,"Senior Software Development Engineer, DevOps",https://www.builtinaustin.com/job/senior-software-development-engineer-devops/8255499,To Apply,Resume_Startup_2026,,,
@@ -172,7 +172,7 @@ Anthropic,Startup,"Research Engineer, Reward Models Platform",https://job-boards
 Anthropic,Startup,"Security Software Engineer, D&R Platform",https://job-boards.greenhouse.io/anthropic/jobs/4595463008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,Senior Education Platform Engineer,https://job-boards.greenhouse.io/anthropic/jobs/5098565008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Senior Security Software Engineer, D&R Platform",https://job-boards.greenhouse.io/anthropic/jobs/5068313008,To Apply,Resume_Startup_2026,,,
-Anthropic,Startup,"Senior Software Engineer, Data Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/5120180008,To Apply,Resume_Startup_2026,,,
+Anthropic,Startup,"Senior Software Engineer, Data Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/5120180008,To Apply,Resume_Startup_2026,cover_letter_anthropic_2026.md,Tier 1,
 Anthropic,Startup,Senior / Staff+ Software Engineer - Autonomous Agent Infrastructure,https://job-boards.greenhouse.io/anthropic/jobs/5065894008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Software Engineer, Accelerator Build Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/4943668008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Software Engineer, Compute Efficiency",https://job-boards.greenhouse.io/anthropic/jobs/5108982008,To Apply,Resume_Startup_2026,,,
@@ -183,9 +183,9 @@ Anthropic,Startup,"Software Engineer, Sandboxing (Systems)",https://job-boards.g
 Anthropic,Startup,"Software Engineer, UI Platform",https://job-boards.greenhouse.io/anthropic/jobs/4673416008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Staff + Senior Software Engineer, AI Reliability",https://job-boards.greenhouse.io/anthropic/jobs/5113224008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Staff Software Engineer, AI Reliability Engineering",https://job-boards.greenhouse.io/anthropic/jobs/5101169008,To Apply,Resume_Startup_2026,,,
-Anthropic,Startup,"Staff Software Engineer, Claude Developer Platform (Backend)",https://job-boards.greenhouse.io/anthropic/jobs/4988878008,To Apply,Resume_Startup_2026,,,
+Anthropic,Startup,"Staff Software Engineer, Claude Developer Platform (Backend)",https://job-boards.greenhouse.io/anthropic/jobs/4988878008,To Apply,Resume_Startup_2026,cover_letter_anthropic_2026.md,Tier 1,
 Anthropic,Startup,"Staff Software Engineer, Claude Developer Platform (Full Stack)",https://job-boards.greenhouse.io/anthropic/jobs/4561282008,To Apply,Resume_Startup_2026,,,
-Anthropic,Startup,"Staff+ Software Engineer, Data Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/5114768008,To Apply,Resume_Startup_2026,,,
+Anthropic,Startup,"Staff+ Software Engineer, Data Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/5114768008,To Apply,Resume_Startup_2026,cover_letter_anthropic_2026.md,Tier 1,
 Anthropic,Startup,"Staff Software Engineer, Platform",https://job-boards.greenhouse.io/anthropic/jobs/5023089008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Staff/Sr Software Engineer, Compute Capacity",https://job-boards.greenhouse.io/anthropic/jobs/5126702008,To Apply,Resume_Startup_2026,,,
 Anthropic,Startup,"Technical Program Manager, Infrastructure",https://job-boards.greenhouse.io/anthropic/jobs/5111783008,To Apply,Resume_Startup_2026,,,
@@ -257,7 +257,7 @@ Anduril,Startup,"Senior Site Reliability Engineer - Deployed, Connected Warfare"
 Anduril,Startup,"Senior Site Reliability Engineer - Developer, Connected Warfare",https://boards.greenhouse.io/andurilindustries/jobs/4268360007?gh_jid=4268360007,To Apply,Resume_Startup_2026,,,
 Anduril,Startup,"Senior Site Reliability Engineer - Developer, Connected Warfare",https://boards.greenhouse.io/andurilindustries/jobs/4277287007?gh_jid=4277287007,To Apply,Resume_Startup_2026,,,
 Anduril,Startup,"Senior Site Reliability Engineer - Developer, Connected Warfare",https://boards.greenhouse.io/andurilindustries/jobs/4277285007?gh_jid=4277285007,To Apply,Resume_Startup_2026,,,
-Anduril,Startup,"Senior Software Engineer, Backend Core Platform",https://boards.greenhouse.io/andurilindustries/jobs/4954956007?gh_jid=4954956007,To Apply,Resume_Startup_2026,,,
+Anduril,Startup,"Senior Software Engineer, Backend Core Platform",https://boards.greenhouse.io/andurilindustries/jobs/4954956007?gh_jid=4954956007,To Apply,Resume_Startup_2026,cover_letter_anduril_2026.md,Tier 1,
 Anduril,Startup,"Senior Software Engineer, Data Platform",https://boards.greenhouse.io/andurilindustries/jobs/5000092007?gh_jid=5000092007,To Apply,Resume_Startup_2026,,,
 Anduril,Startup,"Senior Software Engineer, Device Infrastructure",https://boards.greenhouse.io/andurilindustries/jobs/5006925007?gh_jid=5006925007,To Apply,Resume_Startup_2026,,,
 Anduril,Startup,"Senior Software Engineer, Device Infrastructure",https://boards.greenhouse.io/andurilindustries/jobs/5006922007?gh_jid=5006922007,To Apply,Resume_Startup_2026,,,
@@ -339,7 +339,7 @@ Anduril,Startup,"Systems Engineer, Intelligence Systems ",https://boards.greenho
 Anduril,Startup,Telecommunications Infrastructure Analyst  ,https://boards.greenhouse.io/andurilindustries/jobs/5040105007?gh_jid=5040105007,To Apply,Resume_Startup_2026,,,
 Virtu Financial,Finance,Software Engineer - Frontend Trading Application (C#/.NET),https://job-boards.greenhouse.io/virtu/jobs/4261145002,To Apply,Resume_Finance_2026,,,New York
 Virtu Financial,Finance,Software Engineer - Low Latency (C++),https://job-boards.greenhouse.io/virtu/jobs/8040819002,To Apply,Resume_Finance_2026,,,Austin
-Virtu Financial,Finance,Systems Engineer,https://job-boards.greenhouse.io/virtu/jobs/6153489002,To Apply,Resume_Finance_2026,,,Austin
+Virtu Financial,Finance,Systems Engineer,https://job-boards.greenhouse.io/virtu/jobs/6153489002,To Apply,Resume_Finance_2026,cover_letter_virtu_2026.md,Tier 1,Austin
 Virtu Financial,Finance,UI Developer (React/NodeJS),https://job-boards.greenhouse.io/virtu/jobs/4534064002,To Apply,Resume_Finance_2026,,,New York
 Cloudflare,BigTech,Fullstack Software Engineer,https://boards.greenhouse.io/cloudflare/jobs/7542471?gh_jid=7542471,To Apply,Resume_BigTech_2026,,,
 Cloudflare,BigTech,Network Software Engineer,https://boards.greenhouse.io/cloudflare/jobs/7343755?gh_jid=7343755,To Apply,Resume_BigTech_2026,,,
@@ -396,7 +396,7 @@ Figma,Startup,"Director, Software Engineering - Growth",https://boards.greenhous
 Figma,Startup,"Manager, Software Engineering - Billing",https://boards.greenhouse.io/figma/jobs/5722244004?gh_jid=5722244004,To Apply,Resume_Startup_2026,,,
 Figma,Startup,"Manager, Software Engineering - Collaboration Tools",https://boards.greenhouse.io/figma/jobs/5654898004?gh_jid=5654898004,To Apply,Resume_Startup_2026,,,
 Figma,Startup,"Manager, Software Engineering - Creation Engine",https://boards.greenhouse.io/figma/jobs/5696366004?gh_jid=5696366004,To Apply,Resume_Startup_2026,,,
-Figma,Startup,"Manager, Software Engineering - Design Systems Management",https://boards.greenhouse.io/figma/jobs/5787320004?gh_jid=5787320004,To Apply,Resume_Startup_2026,,,
+Figma,Startup,"Manager, Software Engineering - Design Systems Management",https://boards.greenhouse.io/figma/jobs/5787320004?gh_jid=5787320004,To Apply,Resume_Startup_2026,,Tier 2,
 Figma,Startup,"Manager, Software Engineering - Developer Tools (London, United Kingdom)",https://boards.greenhouse.io/figma/jobs/5574708004?gh_jid=5574708004,To Apply,Resume_Startup_2026,,,
 Figma,Startup,"Manager, Software Engineering - Expressive AI",https://boards.greenhouse.io/figma/jobs/5678196004?gh_jid=5678196004,To Apply,Resume_Startup_2026,,,
 Figma,Startup,"Manager, Software Engineering - Interaction Design",https://boards.greenhouse.io/figma/jobs/5778796004?gh_jid=5778796004,To Apply,Resume_Startup_2026,,,
@@ -419,14 +419,14 @@ Hudson River Trading,Finance,AV & Conferencing Systems Engineer,https://www.huds
 Hudson River Trading,Finance,Software Engineer – Treasury Infrastructure,https://www.hudsonrivertrading.com/hrt-job/experienced-software-engineer-treasury-infrastructure-2/,To Apply,Resume_Finance_2026,,,New York
 Hudson River Trading,Finance,Software Engineer – AI Tools,https://www.hudsonrivertrading.com/hrt-job/experienced-software-engineer-ai-tools-2/,To Apply,Resume_Finance_2026,,,New York
 Hudson River Trading,Finance,Software Engineer – Python,https://www.hudsonrivertrading.com/hrt-job/experienced-software-engineer-2/,To Apply,Resume_Finance_2026,,,New York
-Hudson River Trading,Finance,Software Engineer – C++,https://www.hudsonrivertrading.com/hrt-job/experienced-software-engineer-low-level-c/,To Apply,Resume_Finance_2026,,,Austin
-Hudson River Trading,Finance,HPC Storage Engineer,https://www.hudsonrivertrading.com/hrt-job/hpc-storage-engineer-2/,To Apply,Resume_Finance_2026,,,New York
-Hudson River Trading,Finance,Systems Engineer – R&D,https://www.hudsonrivertrading.com/hrt-job/systems-engineer-rd/,To Apply,Resume_Finance_2026,,,Austin
+Hudson River Trading,Finance,Software Engineer – C++,https://www.hudsonrivertrading.com/hrt-job/experienced-software-engineer-low-level-c/,To Apply,Resume_Finance_2026,cover_letter_hrt_2026.md,Tier 1,Austin
+Hudson River Trading,Finance,HPC Storage Engineer,https://www.hudsonrivertrading.com/hrt-job/hpc-storage-engineer-2/,To Apply,Resume_Finance_2026,cover_letter_hrt_2026.md,Tier 1,New York
+Hudson River Trading,Finance,Systems Engineer – R&D,https://www.hudsonrivertrading.com/hrt-job/systems-engineer-rd/,To Apply,Resume_Finance_2026,cover_letter_hrt_2026.md,Tier 1,Austin
 Hudson River Trading,Finance,GPU Systems Engineer,https://www.hudsonrivertrading.com/hrt-job/gpu-systems-engineer-2/,To Apply,Resume_Finance_2026,,,New York
 Hudson River Trading,Finance,Software Engineer – Distributed Compute,https://www.hudsonrivertrading.com/hrt-job/experienced-c-developer-distributed-compute/,To Apply,Resume_Finance_2026,,,New York
 Hudson River Trading,Finance,Software Engineer – Distributed Systems (Storage/Databases),https://www.hudsonrivertrading.com/hrt-job/experienced-c-developer-distributed-systems-storage-databases/,To Apply,Resume_Finance_2026,,,New York
 Hudson River Trading,Finance,Data Production Engineer,https://www.hudsonrivertrading.com/hrt-job/data-production-engineer/,To Apply,Resume_Finance_2026,,,New York
-Hudson River Trading,Finance,Senior Network Engineer – Low Latency Trading,https://www.hudsonrivertrading.com/hrt-job/senior-network-engineer-low-latency-trading-2/,To Apply,Resume_Finance_2026,,,New York
+Hudson River Trading,Finance,Senior Network Engineer – Low Latency Trading,https://www.hudsonrivertrading.com/hrt-job/senior-network-engineer-low-latency-trading-2/,To Apply,Resume_Finance_2026,cover_letter_hrt_2026.md,Tier 1,New York
 Jane Street,Finance,Front End Software Engineer,https://www.janestreet.com/join-jane-street/open-roles/?id=6184529002,To Apply,Resume_Finance_2026,,,NYC
 Jane Street,Finance,Network Engineer,https://www.janestreet.com/join-jane-street/open-roles/?id=8065576002,To Apply,Resume_Finance_2026,,,NYC
 Jane Street,Finance,"Network Engineer, Security ",https://www.janestreet.com/join-jane-street/open-roles/?id=8121906002,To Apply,Resume_Finance_2026,,,NYC

@@ -51,15 +51,41 @@ Career/
 
 ## Cover Letters
 
-Templates in `cover_letters/`. Substitute `[Company]` and `[Hiring Manager Name]` before sending.
+Templates in `cover_letters/`. Substitute `[Hiring Manager Name]` before sending.
 
-| File | Opening angle |
-|---|---|
-| `cover_letter_bigtech_2026.md` | 6B events/month scale → KEDA savings → CI/CD velocity |
-| `cover_letter_finance_2026.md` | Visa settlement engine (trillions in txn volume) → exactly-once correctness |
-| `cover_letter_startup_2026.md` | End-to-end ownership → shipping velocity → measurable cost impact |
+| File | Target | Opening angle |
+|---|---|---|
+| `cover_letter_google_2026.md` | Google Platforms Infra | TPU/GPU platform layer; scale + silicon |
+| `cover_letter_anthropic_2026.md` | Anthropic | Training/eval data infra; model capability downstream |
+| `cover_letter_meta_2026.md` | Meta Production Eng | Network infra; global backbone at scale |
+| `cover_letter_cloudflare_2026.md` | Cloudflare Distributed Systems | Edge-scale distributed systems; Unimog/Workers |
+| `cover_letter_hrt_2026.md` | Hudson River Trading | C++ correctness culture; HPC/storage/network |
+| `cover_letter_anduril_2026.md` | Anduril Backend Platform | Startup ownership + mission; defense infra |
+| `cover_letter_virtu_2026.md` | Virtu Financial | Low-latency systems; trading infra |
+| `cover_letter_bigtech_2026.md` | Generic Big Tech | 6B events/month scale → KEDA savings → CI/CD |
+| `cover_letter_finance_2026.md` | Generic Finance/HFT | Visa settlement engine; exactly-once correctness |
+| `cover_letter_startup_2026.md` | Generic Startup | End-to-end ownership; shipping velocity; cost impact |
 
-## Application Tracker
+## Application Priority
+
+`Notes` column in the CSV uses tiers:
+- **Tier 1** — apply immediately (20 roles): best fit, company-specific cover letter ready
+- **Tier 2** — apply this week (21 roles): strong fit, use track-level cover letter template
+
+### Tier 1 targets
+| Company | Role | Cover Letter |
+|---|---|---|
+| Google | Senior/Staff SWE, Platforms Infrastructure | `cover_letter_google_2026.md` |
+| Anthropic | Senior/Staff SWE, Data Infrastructure | `cover_letter_anthropic_2026.md` |
+| Meta | Production Network Engineer; SWE Infrastructure | `cover_letter_meta_2026.md` |
+| Cloudflare | Distributed Systems Engineer (Analytical DB / Infra) | `cover_letter_cloudflare_2026.md` |
+| Hudson River Trading | SWE C++; Systems Engineer R&D; HPC Storage; Senior Network Engineer | `cover_letter_hrt_2026.md` |
+| Anduril | Senior SWE, Backend Core Platform | `cover_letter_anduril_2026.md` |
+| Virtu Financial | Systems Engineer | `cover_letter_virtu_2026.md` |
+| PayPal | Sr Staff SWE, Cloud Infrastructure & DevOps | `cover_letter_startup_2026.md` |
+| Eloquent AI | Senior SWE, DevOps & Infrastructure | `cover_letter_startup_2026.md` |
+
+## Tracker
 
 `applications/applications_2026.csv` — columns:
 
