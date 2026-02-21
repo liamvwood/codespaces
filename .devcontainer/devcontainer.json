@@ -1,0 +1,7 @@
+{
+  "name": "Codespaces",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "gh extension install github/gh-copilot"
+}
