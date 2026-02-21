@@ -22,6 +22,7 @@ with context specific to that project; read it before working in that directory.
 ## Agent & Skill Usage
 Custom agents live in `.github/agents/`. Available agents:
 - `resume-editor` — LaTeX resume editing; knows all 4 variants and candidate facts
+- `recruiter` — Reviews resumes from a hiring manager's perspective; flags ATS gaps and weak bullets
 - `application-tracker` — Reads/writes `applications_2026.csv`; fast Haiku model
 - `cover-letter-writer` — Drafts/tailors cover letters; can web-search company context
 
